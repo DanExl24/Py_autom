@@ -1,0 +1,1451 @@
+Coordenada: A1, valor: FORMACIONES TITULADA REGULAR MODALIDAD PRESENCIAL Y VIRTUAL 2026
+Coordenada: B4, valor: RED DE CONOCIMIENTO
+Coordenada: C4, valor: NIVEL
+Coordenada: D4, valor: NOMBRE DEL PROGRAMA
+Coordenada: E4, valor: CODIGO DE PROGRAMA
+Coordenada: F4, valor: VERSION
+Coordenada: G4, valor: FICHA 
+Coordenada: H4, valor: APRENDICES  MATRICULADOS
+Coordenada: I4, valor: TIPO DE OFERTA
+Coordenada: J4, valor: CÓDIGO PROYECTO
+Coordenada: K4, valor: MUNICIPIO
+Coordenada: L4, valor: HORARIO
+Coordenada: M4, valor: AMBIENTE
+Coordenada: N4, valor: DURACION
+Coordenada: O4, valor: AÑO /TRIMESTRE  DE INICI0
+Coordenada: P4, valor: FECHA INICIO
+Coordenada: Q4, valor: FECHA FINAL ETAPA LECTIVA
+Coordenada: R4, valor: FECHA TERMINACION
+Coordenada: S4, valor: INSTRUCTOR TECNICO 2025
+Coordenada: T4, valor: INSTRUCTOR TECNICO 2026
+Coordenada: U4, valor: APOYO TECNICO
+INGLES
+Coordenada: V4, valor: TRANSVERSALES
+Coordenada: B5, valor: INFORMATICA, DISEÑO Y DESARROLLO DE SOFTWARE
+Coordenada: C5, valor: TECNOLOGO
+Coordenada: D5, valor: ANALISIS Y DESARROLLO DE SOFTWARE
+Coordenada: E5, valor: 228118.0
+Coordenada: F5, valor: 1.0
+Coordenada: G5, valor: 2995479.0
+Coordenada: H5, valor: 23.0
+Coordenada: I5, valor: ABIERTA 
+Coordenada: J5, valor: 2480542.0
+Coordenada: K5, valor: FLORENCIA
+Coordenada: L5, valor: LUNES A SABADO 
+ 6:00 AM - 14:00 PM
+Coordenada: M5, valor: 202.0
+Coordenada: O5, valor: T-III-2024
+Coordenada: P5, valor: 2024-07-08 00:00:00
+Coordenada: Q5, valor: 2026-04-11 00:00:00
+Coordenada: R5, valor: 2026-10-07 00:00:00
+Coordenada: S5, valor: OSCAR YANGUAS
+Coordenada: T5, valor: YUDY CONSTANZA GARCIA
+Coordenada: U5, valor: SE REQUIERE AMPLIAR
+Coordenada: C6, valor: TECNOLOGO
+Coordenada: D6, valor: ANALISIS Y DESARROLLO DE SOFTWARE_ CTA
+Coordenada: E6, valor: 228118.0
+Coordenada: F6, valor: 1.0
+Coordenada: G6, valor: 3142784.0
+Coordenada: H6, valor: 28.0
+Coordenada: I6, valor: ABIERTA
+Coordenada: J6, valor: 2480542.0
+Coordenada: K6, valor: FLORENCIA
+Coordenada: L6, valor: LUNES A SABADO 12:00 - 20:00 MIXTA
+Coordenada: M6, valor: 301.0
+Coordenada: O6, valor: T-I-2025
+Coordenada: P6, valor: 2025-02-10 00:00:00
+Coordenada: Q6, valor: 2026-11-10 00:00:00
+Coordenada: R6, valor: 2027-05-10 00:00:00
+Coordenada: S6, valor: OSCAR CASTRO
+Coordenada: T6, valor: OSCAR YANGUAS
+Coordenada: U6, valor: TERMINA ANTES DE LA FECHA HABLAR CON INSTRUCTOR
+Coordenada: C7, valor: TECNOLOGO
+Coordenada: D7, valor: ANIMACIÓN 3D
+Coordenada: E7, valor: 524703.0
+Coordenada: F7, valor: 1.0
+Coordenada: G7, valor: 3172835.0
+Coordenada: H7, valor: 22.0
+Coordenada: I7, valor: ABIERTA DE FORMACION
+Coordenada: J7, valor: 2306922.0
+Coordenada: K7, valor: FLORENCIA
+Coordenada: L7, valor: LUNES A SABADO    12:00 - 20:00  TARDE
+Coordenada: M7, valor: 205.0
+Coordenada: N7, valor: 27.0
+Coordenada: O7, valor: T- II-2025
+Coordenada: P7, valor: 2025-04-29 00:00:00
+Coordenada: Q7, valor: 2027-01-31 00:00:00
+Coordenada: R7, valor: 2027-07-28 00:00:00
+Coordenada: S7, valor: FRANK DARIO RODRIGUEZ
+Coordenada: T7, valor: FRANK DARIO RODRIGUEZ
+Coordenada: C8, valor: TECNICO
+Coordenada: D8, valor: SISTEMAS TELEINFORMATICOS
+Coordenada: E8, valor: 233108.0
+Coordenada: F8, valor: 1.0
+Coordenada: G8, valor: 3172841.0
+Coordenada: H8, valor: 16.0
+Coordenada: I8, valor: ABIERTA DE FORMACION
+Coordenada: J8, valor: 2951303.0
+Coordenada: K8, valor: FLORENCIA
+Coordenada: L8, valor: LUNES A SABADO     06:00-14:00 DIURNA
+Coordenada: M8, valor: 207.0
+Coordenada: N8, valor: 15.0
+Coordenada: O8, valor: T- II-2025
+Coordenada: P8, valor: 2025-04-29 00:00:00
+Coordenada: Q8, valor: 2026-02-07 00:00:00
+Coordenada: R8, valor: 2026-07-28 00:00:00
+Coordenada: S8, valor: YULDOR MILCIADES
+Coordenada: T8, valor: YULDOR MILCIADES
+Coordenada: C9, valor: TECNICO
+Coordenada: D9, valor: SISTEMAS TELEINFORMATICOS
+Coordenada: E9, valor: 233108.0
+Coordenada: F9, valor:  
+Coordenada: G9, valor: 3269694.0
+Coordenada: H9, valor: 14.0
+Coordenada: I9, valor: CERRADA
+Coordenada: J9, valor: 2951303.0
+Coordenada: K9, valor: SAN VICENTE SAN JUAN DE LOZADA
+Coordenada: L9, valor: LUNES A SABADO 18:00 - 23:59
+Coordenada: M9, valor: Municipio de San Vicente del Caguán-Institución Educativa San Juan del Losada-sala de Sitemas
+
+Coordenada: N9, valor: 15.0
+Coordenada: O9, valor: T- II-2025
+Coordenada: P9, valor: 2025-07-01 00:00:00
+Coordenada: Q9, valor: 2026-04-12 00:00:00
+Coordenada: R9, valor: 2026-09-30 00:00:00
+Coordenada: S9, valor: JACKSON APRAEZ SOTO
+Coordenada: T9, valor: JACKSON APRAEZ SOTO
+Coordenada: C10, valor: TECNICO
+Coordenada: D10, valor: SISTEMAS TELEINFORMATICOS
+Coordenada: E10, valor: 233108.0
+Coordenada: F10, valor: 1.0
+Coordenada: G10, valor: 3269402.0
+Coordenada: H10, valor: 24.0
+Coordenada: I10, valor: CERRADA
+Coordenada: J10, valor: 2951303.0
+Coordenada: K10, valor: SOLANO
+Coordenada: L10, valor: LUNES A SABADO 18:00 - 23:59
+
+Coordenada: M10, valor: Municipio de Solano-Escuela de la Inspección de Mononguete
+Coordenada: N10, valor: 15.0
+Coordenada: O10, valor: T- II-2025
+Coordenada: P10, valor: 2025-07-01 00:00:00
+Coordenada: Q10, valor: 2026-04-12 00:00:00
+Coordenada: R10, valor: 2026-09-30 00:00:00
+Coordenada: S10, valor: JORGE ANDRES PEDROZA
+Coordenada: T10, valor: TATIANA MARCELA RAMIREZ SALAZAR
+Coordenada: C11, valor: TECNOLOGO
+Coordenada: D11, valor: ANALISIS Y DESARROLLO DE SOFTWARE_ CTA
+Coordenada: E11, valor: 228118.0
+Coordenada: F11, valor: 1.0
+Coordenada: G11, valor: 3236856.0
+Coordenada: H11, valor: 18.0
+Coordenada: I11, valor: ABIERTA
+Coordenada: J11, valor: 2480542.0
+Coordenada: K11, valor: FLORENCIA
+Coordenada: L11, valor: LUNES A SABADO 12:00 - 20:00 
+Coordenada: M11, valor: 309.0
+Coordenada: N11, valor: 27.0
+Coordenada: O11, valor: T-III 2025
+Coordenada: P11, valor: 2025-07-25 00:00:00
+Coordenada: Q11, valor: 2027-04-28 00:00:00
+Coordenada: R11, valor: 2027-10-24 00:00:00
+Coordenada: S11, valor: DIANA ZAPATA
+Coordenada: T11, valor: PABLO MENESES
+Coordenada: C12, valor: TECNICO
+Coordenada: D12, valor: SISTEMAS TELEINFORMATICOS
+Coordenada: E12, valor: 233108.0
+Coordenada: F12, valor: 1.0
+Coordenada: G12, valor: 3236976.0
+Coordenada: H12, valor: 17.0
+Coordenada: I12, valor: ABIERTA
+Coordenada: J12, valor: 2951303.0
+Coordenada: K12, valor: SAN VICENTE
+Coordenada: L12, valor: LUNES A SABADO 06:00 - 14:00
+Coordenada: M12, valor: 1.0
+Coordenada: N12, valor: 15.0
+Coordenada: O12, valor: T-III 2025
+Coordenada: P12, valor: 2025-07-25 00:00:00
+Coordenada: Q12, valor: 2026-05-25 00:00:00
+Coordenada: R12, valor: 2026-11-24 00:00:00
+Coordenada: S12, valor: JUAN FERNANDO LEIVA
+Coordenada: T12, valor: JUAN FERNANDO LEIVA
+Coordenada: C13, valor: TECNICO
+Coordenada: D13, valor: SISTEMAS TELEINFORMÁTICOS
+Coordenada: E13, valor: 233108.0
+Coordenada: F13, valor: 1.0
+Coordenada: G13, valor: 3292273.0
+Coordenada: H13, valor: 14.0
+Coordenada: I13, valor: CERRADA
+Coordenada: J13, valor: 2951303.0
+Coordenada: K13, valor: FLORENCIA
+Coordenada: L13, valor: LUNES A VIERNES 8:00 AM - 16:00  PM
+Coordenada: M13, valor: Florencia KM 3 VIA NEIVA BRR CUNDUY- Sala de Sistemas -Colegio EPMSC Educativas
+Coordenada: N13, valor: 15.0
+Coordenada: O13, valor: T-III 2025
+Coordenada: P13, valor: 2025-07-25 00:00:00
+Coordenada: Q13, valor: 2026-04-24 00:00:00
+Coordenada: R13, valor: 2026-10-24 00:00:00
+Coordenada: S13, valor: TATIANA MARCELA RAMIREZ SALAZAR
+Coordenada: T13, valor: YULDOR MILCIADES
+Coordenada: C14, valor: TECNICO
+Coordenada: D14, valor: PROGRAMACION DE SOfTWARE
+Coordenada: E14, valor: 233104.0
+Coordenada: F14, valor: 2.0
+Coordenada: G14, valor: 3336020.0
+Coordenada: H14, valor: 59.0
+Coordenada: I14, valor: ABIERTA
+Coordenada: J14, valor: 2197268.0
+Coordenada: K14, valor: FLORENCIA
+Coordenada: L14, valor: LUNES A VIERNES 06:00 - 23:59
+Coordenada: M14, valor: VIRTUAL
+Coordenada: O14, valor: T-III 2025
+Coordenada: P14, valor: 2025-09-29 00:00:00
+Coordenada: Q14, valor: 2026-07-10 00:00:00
+Coordenada: R14, valor: 2026-12-28 00:00:00
+Coordenada: S14, valor: DIANA ZAPATA
+Coordenada: T14, valor: OSCAR CASTRO
+Coordenada: U14, valor: SE REQUIERE AMPLIAR
+Coordenada: C15, valor: TECNOLOGO
+Coordenada: D15, valor: ANALISIS Y DESARROLLO DE SOFTWARE_ CTA
+Coordenada: E15, valor: 228118.0
+Coordenada: F15, valor: 1.0
+Coordenada: G15, valor: 3312737.0
+Coordenada: H15, valor: 17.0
+Coordenada: I15, valor: ABIERTA
+Coordenada: J15, valor: 2480542.0
+Coordenada: K15, valor: FLORENCIA
+Coordenada: L15, valor: LUNES A SABADO 12:00 - 20:00 
+Coordenada: M15, valor: 302.0
+Coordenada: N15, valor: 27.0
+Coordenada: O15, valor: T-IV 2025
+Coordenada: P15, valor: 2025-10-09 00:00:00
+Coordenada: Q15, valor: 2027-07-13 00:00:00
+Coordenada: R15, valor: 2028-01-08 00:00:00
+Coordenada: S15, valor: OSCAR CASTRO
+Coordenada: T15, valor: JOSE RODRIGO JARA RUBIO
+Coordenada: C16, valor: TECNICO
+Coordenada: D16, valor: SISTEMAS TELEINFORMÁTICOS
+Coordenada: E16, valor: 233108.0
+Coordenada: F16, valor: 1.0
+Coordenada: G16, valor: 3370223.0
+Coordenada: H16, valor: 26.0
+Coordenada: I16, valor: CERRADA
+Coordenada: J16, valor: 2951303.0
+Coordenada: K16, valor: SOLITA
+Coordenada: L16, valor: LUNES A SABADO          16:00 - 23:59
+Coordenada: M16, valor: Municipio de Solita-Biblioteca municipal
+Coordenada: O16, valor: T-IV 2025
+Coordenada: P16, valor: 2025-10-22 00:00:00
+Coordenada: Q16, valor: 2026-08-03 00:00:00
+Coordenada: R16, valor: 2027-01-21 00:00:00
+Coordenada: S16, valor: CARLOS ANDRES QUINTERO SABI
+Coordenada: T16, valor: CARLOS ANDRES QUINTERO SABI
+Coordenada: C17, valor: TECNICO
+Coordenada: D17, valor: SISTEMAS TELEINFORMÁTICOS
+Coordenada: E17, valor: 233108.0
+Coordenada: F17, valor: 1.0
+Coordenada: G17, valor: 3396787.0
+Coordenada: H17, valor: 30.0
+Coordenada: I17, valor: CERRADA
+Coordenada: J17, valor: 2951303.0
+Coordenada: K17, valor: CURILLO
+Coordenada: L17, valor: LUNES A SABADO 16:00 - 23:59
+Coordenada: M17, valor: FUNDACIÓN ECOSOAM-Cra 4E No. 1-59 Barrio las Palmas
+Coordenada: O17, valor: T-IV 2025
+Coordenada: P17, valor: 2025-11-24 00:00:00
+Coordenada: Q17, valor: 2026-08-23 00:00:00
+Coordenada: R17, valor: 2027-02-23 00:00:00
+Coordenada: S17, valor: LUIS ALBERTO MONROY CANTILLO
+Coordenada: T17, valor: JORGE ANDRES PEDROZA
+Coordenada: C18, valor: TECNOLOGO
+Coordenada: D18, valor: ANALISIS Y DESARROLLO DE SOFTWARE_ CTA
+Coordenada: E18, valor: 228118.0
+Coordenada: F18, valor: 1.0
+Coordenada: G18, valor: 3407689.0
+Coordenada: H18, valor: 28.0
+Coordenada: I18, valor: CERRADA
+Coordenada: J18, valor: 2480542.0
+Coordenada: K18, valor: FLORENCIA
+Coordenada: L18, valor: LUNES A SABADO 12:00 - 20:00
+Coordenada: M18, valor: 201.0
+Coordenada: N18, valor: 27.0
+Coordenada: O18, valor: T-V 2025
+Coordenada: P18, valor: 2025-12-11 00:00:00
+Coordenada: Q18, valor: 2027-09-10 00:00:00
+Coordenada: R18, valor: 2028-03-10 00:00:00
+Coordenada: S18, valor: YURY LORENA FIERRO BOCANEGRA
+Coordenada: T18, valor: YURY LORENA FIERRO BOCANEGRA
+Coordenada: H19, valor: =SUM(H5:H18)
+Coordenada: Q19, valor: 14.0
+Coordenada: B21, valor: RED DE CONOCIMIENTO
+Coordenada: C21, valor: NIVEL
+Coordenada: D21, valor: NOMBRE DEL PROGRAMA
+Coordenada: E21, valor: CODIGO DE PROGRAMA
+Coordenada: F21, valor: VERSION
+Coordenada: G21, valor: FICHA 
+Coordenada: H21, valor: APRENDICES  MATRICULADOS
+Coordenada: I21, valor: TIPO DE OFERTA
+Coordenada: J21, valor: CÓDIGO PROYECTO
+Coordenada: K21, valor: MUNICIPIO
+Coordenada: L21, valor: HORARIO
+Coordenada: M21, valor: AMBIENTE
+Coordenada: N21, valor: DURACION
+Coordenada: O21, valor: AÑO /TRIMESTRE  DE INICI0
+Coordenada: P21, valor: FECHA INICIO
+Coordenada: Q21, valor: FECHA FINAL ETAPA LECTIVA
+Coordenada: R21, valor: FECHA TERMINACION
+Coordenada: S21, valor: INSTRUCTOR TECNICO 2025
+Coordenada: T21, valor: INSTRUCTOR TECNICO 2026
+Coordenada: U21, valor: APOYO TECNICO
+INGLES
+Coordenada: V21, valor: TRANSVERSALES
+Coordenada: B22, valor: GESTIÓN ADMINISTRATIVA Y SERVICIOS FINANCIEROS
+Coordenada: C22, valor: TECNOLOGO
+Coordenada: D22, valor: GESTION EMPRESARIAL
+Coordenada: E22, valor: 621201.0
+Coordenada: F22, valor: 102.0
+Coordenada: G22, valor: 3064081.0
+Coordenada: H22, valor: 17.0
+Coordenada: I22, valor: ABIERTA
+Coordenada: J22, valor: 2559664.0
+Coordenada: K22, valor: FLORENCIA
+Coordenada: L22, valor: LUNES A SABADO 
+12:00-20:00
+Coordenada: M22, valor: 307.0
+Coordenada: O22, valor: T-IV-2024
+Coordenada: P22, valor: 2024-10-15 00:00:00
+Coordenada: Q22, valor: 2026-04-14 00:00:00
+Coordenada: R22, valor: 2026-10-14 00:00:00
+Coordenada: S22, valor: DIXON RAUL RUEDA
+Coordenada: T22, valor: DIXON RAUL RUEDA
+Coordenada: C23, valor: TECNOLOGO
+Coordenada: D23, valor: GESTION CONTABLE Y FINANCIERA
+Coordenada: E23, valor: 123102.0
+Coordenada: F23, valor: 1.0
+Coordenada: G23, valor: 3064087.0
+Coordenada: H23, valor: 15.0
+Coordenada: I23, valor: ABIERTA
+Coordenada: J23, valor: 2029303.0
+Coordenada: K23, valor: FLORENCIA
+Coordenada: L23, valor: LUNES A SABADO 
+12:00-20:00
+Coordenada: M23, valor: 308.0
+Coordenada: N23, valor: 27.0
+Coordenada: O23, valor: T-IV-2024
+Coordenada: P23, valor: 2024-10-15 00:00:00
+Coordenada: Q23, valor: 2026-05-21 00:00:00
+Coordenada: R23, valor: 2026-10-14 00:00:00
+Coordenada: S23, valor: GENARO RUIZ
+Coordenada: T23, valor: GENARO RUIZ
+Coordenada: C24, valor: TECNOLOGO
+Coordenada: D24, valor: GESTIÓN EMPRESARIAL
+Coordenada: E24, valor: 621201.0
+Coordenada: F24, valor: 102.0
+Coordenada: G24, valor: 3172683.0
+Coordenada: H24, valor: 25.0
+Coordenada: I24, valor: ABIERTA DE FORMACION
+Coordenada: J24, valor: 2559664.0
+Coordenada: K24, valor: FLORENCIA
+Coordenada: L24, valor: LUNES A SABADO    06:00 - 14:00 MAÑANA
+Coordenada: M24, valor: 308.0
+Coordenada: N24, valor: 24.0
+Coordenada: O24, valor: T- II-2025
+Coordenada: P24, valor: 2025-04-29 00:00:00
+Coordenada: Q24, valor: 2026-10-27 00:00:00
+Coordenada: R24, valor: 2027-04-28 00:00:00
+Coordenada: S24, valor: AIFA JANNET LOPEZ VALENCIA
+Coordenada: T24, valor: ALBA LUZ MENDEZ
+Coordenada: C25, valor: TECNOLOGO
+Coordenada: D25, valor: GESTION DOCUMENTAL
+Coordenada: E25, valor: 122901.0
+Coordenada: F25, valor: 1.0
+Coordenada: G25, valor: 3172744.0
+Coordenada: H25, valor: 25.0
+Coordenada: I25, valor: ABIERTA DE FORMACION
+Coordenada: J25, valor: 2309936.0
+Coordenada: K25, valor: FLORENCIA
+Coordenada: L25, valor: LUNES A SABADO    12:00 - 20:00 TARDE
+Coordenada: M25, valor: 310.0
+Coordenada: N25, valor: 27.0
+Coordenada: O25, valor: T- II-2025
+Coordenada: P25, valor: 2025-04-29 00:00:00
+Coordenada: Q25, valor: 2027-01-31 00:00:00
+Coordenada: R25, valor: 2027-07-28 00:00:00
+Coordenada: S25, valor: MARIA VILMA VANEGAS
+Coordenada: T25, valor: MARIA VILMA VANEGAS
+Coordenada: C26, valor: TECNOLOGO
+Coordenada: D26, valor: GESTION DE TALENTO HUMANO
+Coordenada: E26, valor: 112005.0
+Coordenada: F26, valor: 101.0
+Coordenada: G26, valor: 3172757.0
+Coordenada: H26, valor: 25.0
+Coordenada: I26, valor: ABIERTA DE FORMACION
+Coordenada: J26, valor: 1828946.0
+Coordenada: K26, valor: FLORENCIA
+Coordenada: L26, valor: LUNES A SABADO    12:00 - 20:00 TARDE
+Coordenada: M26, valor: 303.0
+Coordenada: N26, valor: 24.0
+Coordenada: O26, valor: T- II-2025
+Coordenada: P26, valor: 2025-04-29 00:00:00
+Coordenada: Q26, valor: 2026-10-27 00:00:00
+Coordenada: R26, valor: 2027-04-28 00:00:00
+Coordenada: S26, valor: ANGI VALENTINA SAZA
+Coordenada: T26, valor: ANGI VALENTINA SAZA
+Coordenada: C27, valor: TECNOLOGO
+Coordenada: D27, valor: GESTIÓN DEL TALENTO HUMANO
+Coordenada: E27, valor: 112005.0
+Coordenada: F27, valor: 101.0
+Coordenada: G27, valor: 3291811.0
+Coordenada: H27, valor: 25.0
+Coordenada: I27, valor: CERRADA
+Coordenada: J27, valor: 1828946.0
+Coordenada: K27, valor: FLORENCIA
+Coordenada: L27, valor: LUNES A SABADO 6:00 - 14:00
+Coordenada: M27, valor: 201.0
+Coordenada: N27, valor: 24.0
+Coordenada: O27, valor: T-III 2025
+Coordenada: P27, valor: 2025-07-25 00:00:00
+Coordenada: Q27, valor: 2027-01-24 00:00:00
+Coordenada: R27, valor: 2027-07-24 00:00:00
+Coordenada: S27, valor: SANDRA LILIANA TRIVIÑO CARVAJAL
+Coordenada: T27, valor: OLGA MARCELA SOTO
+Coordenada: C28, valor: TECNOLOGO
+Coordenada: D28, valor: GESTIÓN EMPRESARIAL
+Coordenada: E28, valor: 621201.0
+Coordenada: F28, valor: 102.0
+Coordenada: G28, valor: 3236691.0
+Coordenada: H28, valor: 25.0
+Coordenada: I28, valor: ABIERTA DE FORMACION
+Coordenada: J28, valor: 2559664.0
+Coordenada: K28, valor: FLORENCIA
+Coordenada: L28, valor: LUNES A SABADO    06:00-14:00 MAÑANA
+Coordenada: M28, valor: 304.0
+Coordenada: N28, valor: 24.0
+Coordenada: O28, valor: T-III 2025
+Coordenada: P28, valor: 2025-07-25 00:00:00
+Coordenada: Q28, valor: 2027-01-22 00:00:00
+Coordenada: R28, valor: 2027-07-24 00:00:00
+Coordenada: S28, valor: ELIESIB ÁVILA BARRETO
+Coordenada: T28, valor: ELIESIB ÁVILA BARRETO
+Coordenada: C29, valor: TECNICO
+Coordenada: D29, valor: CONTABILIZACION DE OPERACIONES COMERCIALES Y FINANCIERAS.
+Coordenada: E29, valor: 133100.0
+Coordenada: F29, valor: 2.0
+Coordenada: G29, valor: 3313178.0
+Coordenada: H29, valor: 30.0
+Coordenada: I29, valor: CERRADA
+Coordenada: J29, valor: 2563668.0
+Coordenada: K29, valor: EL DONCELLO
+Coordenada: L29, valor: LUNES A SABADO 16:00 - 23:59
+Coordenada: M29, valor: EL DONCELLO-SALA TICS DE LA INSTITUCION EDUCATIVA CORAZON INMACULADO DE MARIA
+Coordenada: N29, valor: 15.0
+Coordenada: O29, valor: T-III 2025
+Coordenada: P29, valor: 2025-08-20 00:00:00
+Coordenada: Q29, valor: 2026-05-19 00:00:00
+Coordenada: R29, valor: 2026-11-19 00:00:00
+Coordenada: S29, valor: SANDRA LORENA CUELLAR CASTRO
+Coordenada: T29, valor: WILLIAM DIAZ
+Coordenada: C30, valor: TECNOLOGO
+Coordenada: D30, valor: GESTION CONTABLE Y FINANCIERA
+Coordenada: E30, valor: 123102.0
+Coordenada: F30, valor: 1.0
+Coordenada: G30, valor: 3354122.0
+Coordenada: H30, valor: 18.0
+Coordenada: I30, valor: ABIERTA 
+Coordenada: J30, valor: 2029303.0
+Coordenada: K30, valor: FLORENCIA
+Coordenada: L30, valor: LUNES A SABADO 
+ 12:00-20:00
+Coordenada: M30, valor: 304.0
+Coordenada: N30, valor: 27.0
+Coordenada: O30, valor: T-IV 2025
+Coordenada: P30, valor: 2025-10-09 00:00:00
+Coordenada: Q30, valor: 2027-07-08 00:00:00
+Coordenada: R30, valor: 2028-01-08 00:00:00
+Coordenada: S30, valor: DILTON VIEDA
+Coordenada: T30, valor: DILTON VIEDA
+Coordenada: C31, valor: TECNOLOGO
+Coordenada: D31, valor: GESTIÓN EMPRESARIAL
+Coordenada: E31, valor: 621201.0
+Coordenada: F31, valor: 102.0
+Coordenada: G31, valor: 3312631.0
+Coordenada: H31, valor: 15.0
+Coordenada: I31, valor: ABIERTA 
+Coordenada: J31, valor: 2559664.0
+Coordenada: K31, valor: FLORENCIA
+Coordenada: L31, valor: LUNES A SABADO    12:00-20:00
+Coordenada: M31, valor: 305.0
+Coordenada: N31, valor: 24.0
+Coordenada: O31, valor: T-IV 2025
+Coordenada: P31, valor: 2025-10-09 00:00:00
+Coordenada: Q31, valor: 2027-04-08 00:00:00
+Coordenada: R31, valor: 2027-10-08 00:00:00
+Coordenada: S31, valor: PIEDAD CECILIA ROJAS
+Coordenada: T31, valor: SANDRA LILIANA TRIVIÑO CARVAJAL
+Coordenada: U31, valor: PROGRAMAR SOLO HASTA 31 ABRIL
+Coordenada: C32, valor: TECNICO
+Coordenada: D32, valor: CONTABILIZACION DE OPERACIONES COMERCIALES Y FINANCIERAS.
+Coordenada: E32, valor: 133100.0
+Coordenada: F32, valor: 2.0
+Coordenada: G32, valor: 3312701.0
+Coordenada: H32, valor: 20.0
+Coordenada: I32, valor: ABIERTA 
+Coordenada: J32, valor: 2563668.0
+Coordenada: K32, valor: SAN VICENTE
+Coordenada: L32, valor: LUNES A SABADO    06:00-14:00 MAÑANA
+Coordenada: M32, valor: 5.0
+Coordenada: N32, valor: 15.0
+Coordenada: O32, valor: T-IV 2025
+Coordenada: P32, valor: 2025-10-09 00:00:00
+Coordenada: Q32, valor: 2026-07-13 00:00:00
+Coordenada: R32, valor: 2027-01-08 00:00:00
+Coordenada: S32, valor: DAGOBERTO RIVERA
+Coordenada: T32, valor: DAGOBERTO RIVERA
+Coordenada: U32, valor: PROGRAMAR SOLO HASTA 05 MARZO 
+Coordenada: C33, valor: TECNICO
+Coordenada: D33, valor: ASISTENCIA EN ORGANIZACIÓN DE ARCHIVOS
+Coordenada: E33, valor: 134400.0
+Coordenada: F33, valor: 2.0
+Coordenada: G33, valor: 3312689.0
+Coordenada: H33, valor: 20.0
+Coordenada: I33, valor: ABIERTA
+Coordenada: J33, valor: 2719134.0
+Coordenada: K33, valor: FLORENCIA
+Coordenada: L33, valor: LUNES A SABADO DE 16:00 - 23:59 NOCHE 
+Coordenada: M33, valor: 309.0
+Coordenada: N33, valor: 15.0
+Coordenada: O33, valor: T-IV 2025
+Coordenada: P33, valor: 2025-10-09 00:00:00
+Coordenada: Q33, valor: 2026-07-21 00:00:00
+Coordenada: R33, valor: 2027-01-08 00:00:00
+Coordenada: S33, valor: JOSE LUIS GASCA
+Coordenada: T33, valor: LUCIDIA GASCA
+Coordenada: C34, valor: TECNOLOGO
+Coordenada: D34, valor: GESTIÓN CONTABLE Y FINANCIERA
+Coordenada: E34, valor: 123102.0
+Coordenada: F34, valor: 1.0
+Coordenada: G34, valor: 3389756.0
+Coordenada: H34, valor: 25.0
+Coordenada: I34, valor: ABIERTA
+Coordenada: J34, valor: 2029303.0
+Coordenada: K34, valor: FLORENCIA
+Coordenada: L34, valor: LUNES A SABADO    06:00-14:00 MAÑANA
+Coordenada: M34, valor: 202.0
+Coordenada: N34, valor: 27.0
+Coordenada: O34, valor: T-V 2025
+Coordenada: P34, valor: 2025-12-11 00:00:00
+Coordenada: Q34, valor: 2027-09-28 00:00:00
+Coordenada: R34, valor: 2028-03-10 00:00:00
+Coordenada: S34, valor: AYDA INES GOMEZ REYES
+Coordenada: T34, valor: AYDA INES GOMEZ REYES
+Coordenada: C35, valor: TECNOLOGO
+Coordenada: D35, valor: GESTIÓN CONTABLE Y FINANCIERA
+Coordenada: E35, valor: 123101.0
+Coordenada: F35, valor: 1.0
+Coordenada: G35, valor: 3388626.0
+Coordenada: H35, valor: 49.0
+Coordenada: I35, valor: ABIERTA
+Coordenada: J35, valor: 2029303.0
+Coordenada: K35, valor: FLORENCIA
+Coordenada: L35, valor: LUNES A VIERNES 06:00 - 23:59
+Coordenada: M35, valor: VIRTUAL
+Coordenada: N35, valor: 27.0
+Coordenada: O35, valor: T-V 2025
+Coordenada: P35, valor: 2025-12-09 00:00:00
+Coordenada: Q35, valor: 2027-09-12 00:00:00
+Coordenada: R35, valor: 2028-03-08 00:00:00
+Coordenada: S35, valor: YURI LORENA FIERRO
+Coordenada: T35, valor: SANDRA LORENA CUELLAR CASTRO
+Coordenada: C36, valor: TECNOLOGO
+Coordenada: D36, valor: GESTIÓN CONTABLE Y FINANCIERA
+Coordenada: E36, valor: 123101.0
+Coordenada: F36, valor: 1.0
+Coordenada: G36, valor: 3388627.0
+Coordenada: H36, valor: 56.0
+Coordenada: I36, valor: ABIERTA
+Coordenada: J36, valor: 2029303.0
+Coordenada: K36, valor: FLORENCIA
+Coordenada: L36, valor: LUNES A VIERNES 06:00 - 23:59
+Coordenada: M36, valor: VIRTUAL
+Coordenada: N36, valor: 27.0
+Coordenada: O36, valor: T-V 2025
+Coordenada: P36, valor: 2025-12-09 00:00:00
+Coordenada: Q36, valor: 2027-09-12 00:00:00
+Coordenada: R36, valor: 2028-03-08 00:00:00
+Coordenada: S36, valor: OLGA MARCELA SOTTO
+Coordenada: T36, valor: SANDRA LORENA CUELLAR CASTRO
+Coordenada: C37, valor: TECNOLOGO
+Coordenada: D37, valor: GESTIÓN CONTABLE Y FINANCIERA
+Coordenada: E37, valor: 123101.0
+Coordenada: F37, valor: 1.0
+Coordenada: G37, valor: 3388628.0
+Coordenada: H37, valor: 51.0
+Coordenada: I37, valor: ABIERTA
+Coordenada: J37, valor: 2029303.0
+Coordenada: K37, valor: FLORENCIA
+Coordenada: L37, valor: LUNES A VIERNES 06:00 - 23:59
+Coordenada: M37, valor: VIRTUAL
+Coordenada: N37, valor: 27.0
+Coordenada: O37, valor: T-V 2025
+Coordenada: P37, valor: 2025-12-09 00:00:00
+Coordenada: Q37, valor: 2027-09-12 00:00:00
+Coordenada: R37, valor: 2028-03-08 00:00:00
+Coordenada: S37, valor: MARY LUZ IDROBO GUTIERREZ
+Coordenada: T37, valor: YENNIFER YUSNEIDY SUAREZ 
+Coordenada: C38, valor: TECNOLOGO
+Coordenada: D38, valor: GESTIÓN CONTABLE Y FINANCIERA
+Coordenada: E38, valor: 123101.0
+Coordenada: F38, valor: 1.0
+Coordenada: G38, valor: 3388629.0
+Coordenada: H38, valor: 47.0
+Coordenada: I38, valor: ABIERTA
+Coordenada: J38, valor: 2029303.0
+Coordenada: K38, valor: FLORENCIA
+Coordenada: L38, valor: LUNES A VIERNES 06:00 - 23:59
+Coordenada: M38, valor: VIRTUAL
+Coordenada: N38, valor: 27.0
+Coordenada: O38, valor: T-V 2025
+Coordenada: P38, valor: 2025-12-09 00:00:00
+Coordenada: Q38, valor: 2027-09-12 00:00:00
+Coordenada: R38, valor: 2028-03-08 00:00:00
+Coordenada: S38, valor: CRISTIAN RODRIGO LOZADA REINA
+Coordenada: T38, valor: YENNIFER YUSNEIDY SUAREZ 
+Coordenada: C39, valor: TECNOLOGO
+Coordenada: D39, valor: GESTIÓN CONTABLE Y FINANCIERA
+Coordenada: E39, valor: 123101.0
+Coordenada: F39, valor: 1.0
+Coordenada: G39, valor: 3388630.0
+Coordenada: H39, valor: 54.0
+Coordenada: I39, valor: ABIERTA
+Coordenada: J39, valor: 2029303.0
+Coordenada: K39, valor: FLORENCIA
+Coordenada: L39, valor: LUNES A VIERNES 06:00 - 23:59
+Coordenada: M39, valor: VIRTUAL
+Coordenada: N39, valor: 27.0
+Coordenada: O39, valor: T-V 2025
+Coordenada: P39, valor: 2025-12-09 00:00:00
+Coordenada: Q39, valor: 2027-09-12 00:00:00
+Coordenada: R39, valor: 2028-03-08 00:00:00
+Coordenada: S39, valor: YANETH MOLINA CABRERA
+Coordenada: T39, valor: HENRY GUZMAN MONTAÑEZ
+Coordenada: C40, valor: TECNOLOGO
+Coordenada: D40, valor: GESTIÓN CONTABLE Y FINANCIERA
+Coordenada: E40, valor: 123102.0
+Coordenada: F40, valor: 1.0
+Coordenada: G40, valor: 3407730.0
+Coordenada: H40, valor: 28.0
+Coordenada: I40, valor: CERRADA
+Coordenada: J40, valor: 2029303.0
+Coordenada: K40, valor: FLORENCIA
+Coordenada: L40, valor: LUNES A SABADO    06:00-14:00
+Coordenada: M40, valor: 312.0
+Coordenada: N40, valor: 27.0
+Coordenada: O40, valor: T-V 2025
+Coordenada: P40, valor: 2025-12-11 00:00:00
+Coordenada: Q40, valor: =+EDATE(P40,22)-1
+Coordenada: R40, valor: =+EDATE(P40,28)-1
+Coordenada: S40, valor: AIFA JANNET LOPEZ VALENCIA
+Coordenada: T40, valor: AIFA JANNET LOPEZ VALENCIA
+Coordenada: H41, valor: =SUM(H22:H40)
+Coordenada: Q41, valor: 20.0
+Coordenada: B43, valor: RED DE CONOCIMIENTO
+Coordenada: C43, valor: NIVEL
+Coordenada: D43, valor: NOMBRE DEL PROGRAMA
+Coordenada: E43, valor: CODIGO DE PROGRAMA
+Coordenada: F43, valor: VERSION
+Coordenada: G43, valor: FICHA 
+Coordenada: H43, valor: APRENDICES  MATRICULADOS
+Coordenada: I43, valor: TIPO DE OFERTA
+Coordenada: J43, valor: CÓDIGO PROYECTO
+Coordenada: K43, valor: MUNICIPIO
+Coordenada: L43, valor: HORARIO
+Coordenada: M43, valor: AMBIENTE
+Coordenada: N43, valor: DURACION
+Coordenada: O43, valor: AÑO /TRIMESTRE  DE INICI0
+Coordenada: P43, valor: FECHA INICIO
+Coordenada: Q43, valor: FECHA FINAL ETAPA LECTIVA
+Coordenada: R43, valor: FECHA TERMINACION
+Coordenada: S43, valor: INSTRUCTOR TECNICO 2025
+Coordenada: T43, valor: INSTRUCTOR TECNICO 2026
+Coordenada: U43, valor: APOYO TECNICO
+INGLES
+Coordenada: V43, valor: TRANSVERSALES
+Coordenada: A44, valor: 3.0
+Coordenada: B44, valor: COMERCIO Y VENTAS
+Coordenada: C44, valor: TECNICO
+Coordenada: D44, valor: OPERACIONES DE CAJA Y SERVICOS DE ALAMCENES DE CADENA
+Coordenada: E44, valor: 632305.0
+Coordenada: F44, valor: 100.0
+Coordenada: G44, valor: 3312719.0
+Coordenada: H44, valor: 13.0
+Coordenada: I44, valor: ABIERTA
+Coordenada: J44, valor: 1736068.0
+Coordenada: K44, valor: FLORENCIA
+Coordenada: L44, valor: LUNES A SABADO    16:00 - 23:59
+Coordenada: M44, valor: 201.0
+Coordenada: N44, valor: 15.0
+Coordenada: O44, valor: T-IV 2025
+Coordenada: P44, valor: 2025-10-09 00:00:00
+Coordenada: Q44, valor: 2026-04-09 00:00:00
+Coordenada: R44, valor: 2026-10-08 00:00:00
+Coordenada: S44, valor: NORMA PIEDAD RIVERA
+Coordenada: T44, valor: NORMA PIEDAD RIVERA
+Coordenada: U44, valor: SE REQUIERE AMPLIAR
+Coordenada: C45, valor: TECNICO
+Coordenada: D45, valor: OPERACIONES COMERCIALES
+Coordenada: E45, valor: 632105.0
+Coordenada: F45, valor: 100.0
+Coordenada: G45, valor: 3312732.0
+Coordenada: H45, valor: 14.0
+Coordenada: I45, valor: ABIERTA
+Coordenada: K45, valor: FLORENCIA
+Coordenada: L45, valor: LUNES A SABADO    16:00 - 23:59
+Coordenada: M45, valor: 202.0
+Coordenada: N45, valor: 15.0
+Coordenada: O45, valor: T-IV 2025
+Coordenada: P45, valor: 2025-10-09 00:00:00
+Coordenada: Q45, valor: 2026-04-09 00:00:00
+Coordenada: R45, valor: 2026-10-08 00:00:00
+Coordenada: S45, valor: TATIANA SALAZAR
+Coordenada: T45, valor: SAIRA ZOORETH IBARRA RIVERA
+Coordenada: U45, valor: SE REQUIERE AMPLIAR
+Coordenada: H46, valor: =SUM(H44:H45)
+Coordenada: T46, valor:  
+Coordenada: B48, valor: RED DE CONOCIMIENTO
+Coordenada: C48, valor: NIVEL
+Coordenada: D48, valor: NOMBRE DEL PROGRAMA
+Coordenada: E48, valor: CODIGO DE PROGRAMA
+Coordenada: F48, valor: VERSION
+Coordenada: G48, valor: FICHA 
+Coordenada: H48, valor: APRENDICES  MATRICULADOS
+Coordenada: I48, valor: TIPO DE OFERTA
+Coordenada: J48, valor: CÓDIGO PROYECTO
+Coordenada: K48, valor: MUNICIPIO
+Coordenada: L48, valor: HORARIO
+Coordenada: M48, valor: AMBIENTE
+Coordenada: N48, valor: DURACION
+Coordenada: O48, valor: AÑO /TRIMESTRE  DE INICI0
+Coordenada: P48, valor: FECHA INICIO
+Coordenada: Q48, valor: FECHA FINAL ETAPA LECTIVA
+Coordenada: R48, valor: FECHA TERMINACION
+Coordenada: S48, valor: INSTRUCTOR TECNICO 2025
+Coordenada: T48, valor: INSTRUCTOR TECNICO 2026
+Coordenada: U48, valor: APOYO TECNICO
+INGLES
+Coordenada: V48, valor: TRANSVERSALES
+Coordenada: B49, valor: SALUD
+Coordenada: C49, valor: TECNICO
+Coordenada: D49, valor: SERVICIO FARMACEUTICO
+Coordenada: E49, valor: 331505.0
+Coordenada: F49, valor: 2.0
+Coordenada: G49, valor: 3215046.0
+Coordenada: H49, valor: 25.0
+Coordenada: I49, valor: OFERTA CERRADA (Solicitar al instructor Jose Reinel hacer la concertación)
+Coordenada: J49, valor: 2281534.0
+Coordenada: K49, valor: DONCELLO
+Coordenada: L49, valor: LUNES A SABADO     12:00 -20:00 TARDE
+Coordenada: M49, valor: Caseta comunal barrio olimpico - jornada tarde
+Coordenada: N49, valor: 17.0
+Coordenada: O49, valor: T- II-2025
+Coordenada: P49, valor: 2025-04-29 00:00:00
+Coordenada: Q49, valor: 2026-04-28 00:00:00
+Coordenada: R49, valor: 2026-10-28 00:00:00
+Coordenada: S49, valor: JOSE REINEL
+Coordenada: T49, valor: JOSE REINEL
+Coordenada: C50, valor: TECNICO
+Coordenada: D50, valor: ENFERMERIA
+Coordenada: E50, valor: 331120.0
+Coordenada: F50, valor: 3.0
+Coordenada: G50, valor: 3237077.0
+Coordenada: H50, valor: 25.0
+Coordenada: I50, valor: ABIERTA
+Coordenada: J50, valor: 2027009.0
+Coordenada: K50, valor: FLORENCIA
+Coordenada: L50, valor: LUNES A SABADO 06:00-14:00
+Coordenada: M50, valor: 104.0
+Coordenada: N50, valor: 18.0
+Coordenada: O50, valor: T-III 2025
+Coordenada: P50, valor: 2025-07-25 00:00:00
+Coordenada: Q50, valor: 2026-07-25 00:00:00
+Coordenada: R50, valor: 2027-01-24 00:00:00
+Coordenada: S50, valor: AURA VIVIANA PASTRANA
+Coordenada: T50, valor: AURA VIVIANA PASTRANA
+Coordenada: C51, valor: TECNICO
+Coordenada: D51, valor: APOYO ADMINISTRATIVO EN SALUD
+Coordenada: E51, valor: 134508.0
+Coordenada: F51, valor: 1.0
+Coordenada: G51, valor: 3237079.0
+Coordenada: H51, valor: 25.0
+Coordenada: I51, valor: ABIERTA
+Coordenada: J51, valor: 3057485.0
+Coordenada: K51, valor: FLORENCIA
+Coordenada: L51, valor: LUNES A SABADO 06:00-14:00
+Coordenada: M51, valor: 310.0
+Coordenada: N51, valor: 18.0
+Coordenada: O51, valor: T-III 2025
+Coordenada: P51, valor: 2025-07-25 00:00:00
+Coordenada: Q51, valor: 2026-07-28 00:00:00
+Coordenada: R51, valor: 2027-01-24 00:00:00
+Coordenada: S51, valor: ADRIANA MONSALVE 
+Coordenada: T51, valor: ADRIANA MONSALVE 
+Coordenada: C52, valor: TECNICO
+Coordenada: D52, valor: SERVICIOS FARMACEUTICOS
+Coordenada: E52, valor: 331505.0
+Coordenada: F52, valor: 2.0
+Coordenada: G52, valor: 3237080.0
+Coordenada: H52, valor: 25.0
+Coordenada: I52, valor: ABIERTA
+Coordenada: J52, valor: 2771409.0
+Coordenada: K52, valor: FLORENCIA
+Coordenada: L52, valor: LUNES A SABADO 12:00-20:00
+Coordenada: M52, valor: 206.0
+Coordenada: N52, valor: 17.0
+Coordenada: O52, valor: T-III 2025
+Coordenada: P52, valor: 2025-07-25 00:00:00
+Coordenada: Q52, valor: 2026-07-25 00:00:00
+Coordenada: R52, valor: 2027-01-24 00:00:00
+Coordenada: S52, valor: MILANY QUINTERO
+Coordenada: T52, valor: MILANY QUINTERO
+Coordenada: C53, valor: TECNICO
+Coordenada: D53, valor: ATENCIÓN INTEGRAL A LA PRIMERA INFANCIA
+Coordenada: E53, valor: 637200.0
+Coordenada: F53, valor: 1.0
+Coordenada: G53, valor: 3312813.0
+Coordenada: H53, valor: 20.0
+Coordenada: I53, valor: ABIERTA
+Coordenada: J53, valor: 2910589.0
+Coordenada: K53, valor: FLORENCIA
+Coordenada: L53, valor: LUNES A SABADO    18:00 - 23:59
+Coordenada: M53, valor: 104.0
+Coordenada: N53, valor: 15.0
+Coordenada: O53, valor: T-IV 2025
+Coordenada: P53, valor: 2025-10-09 00:00:00
+Coordenada: Q53, valor: 2026-07-13 00:00:00
+Coordenada: R53, valor: 2027-01-08 00:00:00
+Coordenada: S53, valor: ANA MILENA
+Coordenada: T53, valor: ANA MILENA
+Coordenada: C54, valor: TECNICO
+Coordenada: D54, valor: SALUD PUBLICA
+Coordenada: E54, valor: 331308.0
+Coordenada: F54, valor: 3.0
+Coordenada: G54, valor: 3312828.0
+Coordenada: H54, valor: 16.0
+Coordenada: I54, valor: ABIERTA
+Coordenada: J54, valor: 2196833.0
+Coordenada: K54, valor: FLORENCIA
+Coordenada: L54, valor: LUNES A SABADO 06:00-14:00
+Coordenada: M54, valor: 307.0
+Coordenada: N54, valor: 17.0
+Coordenada: O54, valor: T-IV 2025
+Coordenada: P54, valor: 2025-10-09 00:00:00
+Coordenada: Q54, valor: 2026-10-08 00:00:00
+Coordenada: R54, valor: 2027-04-08 00:00:00
+Coordenada: S54, valor: MARIA  ALEJANDRA 
+Coordenada: T54, valor: SINDY MOLINA
+Coordenada: C55, valor: TECNICO
+Coordenada: D55, valor: SERVICIOS FARMACEUTICOS
+Coordenada: E55, valor: 331505.0
+Coordenada: F55, valor: 2.0
+Coordenada: G55, valor: 3312843.0
+Coordenada: H55, valor: 22.0
+Coordenada: I55, valor: ABIERTA
+Coordenada: J55, valor: 2771409.0
+Coordenada: K55, valor: SAN VICENTRE 
+Coordenada: L55, valor: LUNES A SABADO 12:00-20:00
+Coordenada: M55, valor: 1.0
+Coordenada: N55, valor: 17.0
+Coordenada: O55, valor: T-IV 2025
+Coordenada: P55, valor: 2025-10-09 00:00:00
+Coordenada: Q55, valor: 2026-10-08 00:00:00
+Coordenada: R55, valor: 2027-04-08 00:00:00
+Coordenada: S55, valor: JOSE REINEL 
+Coordenada: T55, valor: SAMUEL FRANCO
+Coordenada: C56, valor: TECNICO
+Coordenada: D56, valor: ATENCIÓN INTEGRAL A LA PRIMERA INFANCIA
+Coordenada: E56, valor: 637200.0
+Coordenada: F56, valor: 1.0
+Coordenada: G56, valor: 3383901.0
+Coordenada: H56, valor: 25.0
+Coordenada: I56, valor: CERRADA
+Coordenada: J56, valor: 2910589.0
+Coordenada: K56, valor: SAN VICENTE DEL CAGUAN
+Coordenada: L56, valor: LUNES A SABADO 06:00 - 14:00 
+Coordenada: M56, valor: AMBIENTE 02 SUBSEDE SAN VICENTE DEL CAGUAN 
+Coordenada: O56, valor: T- IV 2025
+Coordenada: P56, valor: 2025-11-11 00:00:00
+Coordenada: Q56, valor: 2026-08-10 00:00:00
+Coordenada: R56, valor: 2027-02-10 00:00:00
+Coordenada: S56, valor: JUDY XIMENA ESCANDON
+Coordenada: T56, valor: JUDY XIMENA ESCANDON
+Coordenada: C57, valor: TECNICO
+Coordenada: D57, valor: PROMOTOR DE SALUD
+Coordenada: E57, valor: 331318.0
+Coordenada: F57, valor: 1.0
+Coordenada: G57, valor: 3398491.0
+Coordenada: H57, valor: 36.0
+Coordenada: I57, valor: CERRADA
+Coordenada: K57, valor: SAN VICENTRE 
+Coordenada: L57, valor: LUNES A SABADO DE LAS 06:00AM A LAS 12:M Y DE LAS 14:00PM A LAS 20:00PM
+Coordenada: M57, valor: AMBIENTE 03 Y 06-SEDE SAN VICENTE DEL CAGUAN
+Coordenada: O57, valor: T- IV 2025
+Coordenada: P57, valor: 2025-11-24 00:00:00
+Coordenada: Q57, valor: 2026-05-24 00:00:00
+Coordenada: R57, valor: 2026-08-23 00:00:00
+Coordenada: S57, valor: JOINER MANUEL MONTILLA MUÑOZ 
+Coordenada: T57, valor: JOINER MANUEL MONTILLA MUÑOZ 
+Coordenada: C58, valor: TECNICO
+Coordenada: D58, valor: PROMOTOR DE SALUD
+Coordenada: E58, valor: 331318.0
+Coordenada: F58, valor: 1.0
+Coordenada: G58, valor: 3398381.0
+Coordenada: H58, valor: 20.0
+Coordenada: I58, valor: CERRADA
+Coordenada: K58, valor: FLORENCIA - RURAL
+Coordenada: L58, valor: LUNES A SABADO 12:00M - 20:00PM
+Coordenada: M58, valor: 312.0
+Coordenada: O58, valor: T- IV 2025
+Coordenada: P58, valor: 2025-11-24 00:00:00
+Coordenada: Q58, valor: 2026-05-24 00:00:00
+Coordenada: R58, valor: 2026-08-23 00:00:00
+Coordenada: S58, valor: FIDELBERTO GALEANO RAMIREZ
+Coordenada: T58, valor: FIDELBERTO GALEANO RAMIREZ
+Coordenada: C59, valor: TECNICO
+Coordenada: D59, valor: PROMOTOR DE SALUD
+Coordenada: E59, valor: 331318.0
+Coordenada: F59, valor: 1.0
+Coordenada: G59, valor: 3398384.0
+Coordenada: H59, valor: 28.0
+Coordenada: I59, valor: CERRADA
+Coordenada: K59, valor: FLORENCIA - URBANA
+Coordenada: L59, valor: LUNES A SABADO DE 16:00 M - 23:59 PM
+Coordenada: M59, valor: 312.0
+Coordenada: O59, valor: T- IV 2025
+Coordenada: P59, valor: 2025-11-24 00:00:00
+Coordenada: Q59, valor: 2026-05-24 00:00:00
+Coordenada: R59, valor: 2026-08-23 00:00:00
+Coordenada: S59, valor: FIDELBERTO GALEANO RAMIREZ
+Coordenada: T59, valor: FIDELBERTO GALEANO RAMIREZ
+Coordenada: H60, valor: =SUM(H49:H59)
+Coordenada: Q60, valor: 11.0
+Coordenada: B62, valor: RED DE CONOCIMIENTO
+Coordenada: C62, valor: NIVEL
+Coordenada: D62, valor: NOMBRE DEL PROGRAMA
+Coordenada: E62, valor: CODIGO DE PROGRAMA
+Coordenada: F62, valor: VERSION
+Coordenada: G62, valor: FICHA 
+Coordenada: H62, valor: APRENDICES  MATRICULADOS
+Coordenada: I62, valor: TIPO DE OFERTA
+Coordenada: J62, valor: CÓDIGO PROYECTO
+Coordenada: K62, valor: MUNICIPIO
+Coordenada: L62, valor: HORARIO
+Coordenada: M62, valor: AMBIENTE
+Coordenada: N62, valor: DURACION
+Coordenada: O62, valor: AÑO /TRIMESTRE  DE INICI0
+Coordenada: P62, valor: FECHA INICIO
+Coordenada: Q62, valor: FECHA FINAL ETAPA LECTIVA
+Coordenada: R62, valor: FECHA TERMINACION
+Coordenada: S62, valor: INSTRUCTOR TECNICO 2025
+Coordenada: T62, valor: INSTRUCTOR TECNICO 2026
+Coordenada: U62, valor: APOYO TECNICO
+INGLES
+Coordenada: V62, valor: TRANSVERSALES
+Coordenada: A63, valor: 5.0
+Coordenada: B63, valor: ACTIVIDAD FISICA
+Coordenada: C63, valor: TECNOLOGO
+Coordenada: D63, valor: ENTRENAMIENTO DEPORTIVO
+Coordenada: E63, valor: 525203.0
+Coordenada: F63, valor: 100.0
+Coordenada: G63, valor: 3064079.0
+Coordenada: H63, valor: 17.0
+Coordenada: I63, valor: ABIERTA
+Coordenada: J63, valor: 2481492.0
+Coordenada: K63, valor: FLORENCIA
+Coordenada: L63, valor: LUNES A SABADO 
+06:00-14:00
+Coordenada: M63, valor: 306.0
+Coordenada: O63, valor: T-IV-2024
+Coordenada: P63, valor: 2024-10-15 00:00:00
+Coordenada: Q63, valor: 2026-04-14 00:00:00
+Coordenada: R63, valor: 2026-10-14 00:00:00
+Coordenada: S63, valor: JOSE JAIBER DIAZ
+Coordenada: T63, valor: 
+JHON JAIRO CALDERON
+Coordenada: U63, valor: SE REQUIERE AMPLIAR
+Coordenada: H64, valor: =SUM(H63)
+Coordenada: Q64, valor: 1.0
+Coordenada: O65, valor:  
+Coordenada: B66, valor: RED DE CONOCIMIENTO
+Coordenada: C66, valor: NIVEL
+Coordenada: D66, valor: NOMBRE DEL PROGRAMA
+Coordenada: E66, valor: CODIGO DE PROGRAMA
+Coordenada: F66, valor: VERSION
+Coordenada: G66, valor: FICHA 
+Coordenada: H66, valor: APRENDICES  MATRICULADOS
+Coordenada: I66, valor: TIPO DE OFERTA
+Coordenada: J66, valor: CÓDIGO PROYECTO
+Coordenada: K66, valor: MUNICIPIO
+Coordenada: L66, valor: HORARIO
+Coordenada: M66, valor: AMBIENTE
+Coordenada: N66, valor: DURACION
+Coordenada: O66, valor: AÑO /TRIMESTRE  DE INICI0
+Coordenada: P66, valor: FECHA INICIO
+Coordenada: Q66, valor: FECHA FINAL ETAPA LECTIVA
+Coordenada: R66, valor: FECHA TERMINACION
+Coordenada: S66, valor: INSTRUCTOR TECNICO 2025
+Coordenada: T66, valor: INSTRUCTOR TECNICO 2026
+Coordenada: U66, valor: APOYO TECNICO
+INGLES
+Coordenada: V66, valor: TRANSVERSALES
+Coordenada: B67, valor: CULTURA
+Coordenada: C67, valor: TECNICO
+Coordenada: D67, valor: INTERPRETACION DE INSTRUMENTOS MUSICALES
+Coordenada: E67, valor: 531200.0
+Coordenada: F67, valor: 2.0
+Coordenada: G67, valor: 3281213.0
+Coordenada: H67, valor: 25.0
+Coordenada: I67, valor: CERRADA
+Coordenada: J67, valor: 2900751.0
+Coordenada: K67, valor: FLORENCIA
+Coordenada: L67, valor: LUNES A VIERNES 16:00 - 23:59 PM  Y  SABADOS 6:00 - 14:00
+Coordenada: M67, valor: Florencia-Iglesia Pentecostal Unida de Colombia Barrio el Triunfo
+Coordenada: O67, valor: T- II-2025
+Coordenada: P67, valor: 2025-07-10 00:00:00
+Coordenada: Q67, valor: 2026-04-13 00:00:00
+Coordenada: R67, valor: 2026-10-09 00:00:00
+Coordenada: S67, valor: IVONNE QUINTERO
+Coordenada: T67, valor: IVONNE QUINTERO
+Coordenada: U67, valor: SE REQUIERE AMPLIAR
+Coordenada: H68, valor: =SUM(H67)
+Coordenada: Q68, valor: 2.0
+Coordenada: B70, valor: RED DE CONOCIMIENTO
+Coordenada: C70, valor: NIVEL
+Coordenada: D70, valor: NOMBRE DEL PROGRAMA
+Coordenada: E70, valor: CODIGO                            DE PROGRAMA
+Coordenada: F70, valor: VERSION
+Coordenada: G70, valor: FICHA 
+Coordenada: H70, valor: APRENDICES  MATRICULADOS
+Coordenada: I70, valor: TIPO DE OFERTA
+Coordenada: J70, valor: CÓDIGO PROYECTO
+Coordenada: K70, valor: MUNICIPIO
+Coordenada: L70, valor: HORARIO
+Coordenada: M70, valor: AMBIENTE
+Coordenada: N70, valor: DURACION
+Coordenada: O70, valor: AÑO /TRIMESTRE  DE INICI0
+Coordenada: P70, valor: FECHA INICIO
+Coordenada: Q70, valor: FECHA FINAL ETAPA LECTIVA
+Coordenada: R70, valor: FECHA TERMINACION
+Coordenada: S70, valor: INSTRUCTOR TECNICO 2025
+Coordenada: T70, valor: INSTRUCTOR TECNICO 2026
+Coordenada: U70, valor: APOYO TECNICO
+INGLES
+Coordenada: V70, valor: TRANSVERSALES
+Coordenada: B71, valor: PECUARIA
+Coordenada: C71, valor: TECNOLOGO
+Coordenada: D71, valor: PRODUCCIÓN GANADERA
+Coordenada: E71, valor: 723106.0
+Coordenada: F71, valor: 102.0
+Coordenada: G71, valor: 3172849.0
+Coordenada: H71, valor: 25.0
+Coordenada: I71, valor: ABIERTA
+Coordenada: J71, valor: 1724211.0
+Coordenada: K71, valor: FLORENCIA
+Coordenada: L71, valor: LUNES A SABADO   12:00 - 20:00 TARDE
+Coordenada: M71, valor: GRANJA, JORNADA MAÑANA
+Coordenada: N71, valor: 24.0
+Coordenada: O71, valor: T- II-2025
+Coordenada: P71, valor: 2025-04-29 00:00:00
+Coordenada: Q71, valor: 2026-10-27 00:00:00
+Coordenada: R71, valor: 2027-04-28 00:00:00
+Coordenada: S71, valor: RICARDO RUSINQUE
+Coordenada: T71, valor: RICARDO RUSINQUE (APOYO TECNICO)
+Coordenada: C72, valor: TECNICO
+Coordenada: D72, valor: PRODUCCIÓN PECUARIA
+Coordenada: E72, valor: 733290.0
+Coordenada: F72, valor: 1.0
+Coordenada: G72, valor: 3253979.0
+Coordenada: H72, valor: 25.0
+Coordenada: I72, valor: 23.0
+Coordenada: J72, valor: 2953698.0
+Coordenada: K72, valor: SAN VICENTE DEL CAGUAN-Caseta Comunal de la Vereda Sincelejo
+Coordenada: L72, valor: LUNES A SABADO   12:00 - 20:00 TARDE
+Coordenada: M72, valor: San Vicente del Caguan-Caseta Comunal de la Vereda Sincelejo
+Coordenada: N72, valor: 15.0
+Coordenada: O72, valor: T- II-2025
+Coordenada: P72, valor: 2025-06-09 00:00:00
+Coordenada: Q72, valor: 2026-03-08 00:00:00
+Coordenada: R72, valor: 2026-09-08 00:00:00
+Coordenada: S72, valor: PEDRO PINZON ARDILA
+Coordenada: T72, valor: JULIAN DUSSAN
+Coordenada: U72, valor: SE REQUIERE AMPLIAR
+
+SE AMPLIO HASTA 30/03/2026
+Coordenada: C73, valor: TECNICO
+Coordenada: D73, valor: PRODUCCIÓN PECUARIA
+Coordenada: E73, valor: 733290.0
+Coordenada: F73, valor: 1.0
+Coordenada: G73, valor: 3172855.0
+Coordenada: H73, valor: 25.0
+Coordenada: I73, valor: ABIERTA
+Coordenada: J73, valor: 2953698.0
+Coordenada: K73, valor: DONCELLO
+Coordenada: L73, valor: LUNES A SABADO   12:00 - 19:00 tarde
+Coordenada: M73, valor: ALCALDIA MUNICIPAL
+Coordenada: N73, valor: 15.0
+Coordenada: O73, valor: T- II-2025
+Coordenada: P73, valor: 2025-04-29 00:00:00
+Coordenada: Q73, valor: 2026-01-27 00:00:00
+Coordenada: R73, valor: 2026-07-28 00:00:00
+Coordenada: T73, valor: EDUAR CASANOVA
+Coordenada: U73, valor: SE REQUIERE AMPLIAR
+
+SE AMPLIO HASTA EL 27 DE MARZO -2026
+Coordenada: C74, valor: TECNICO
+Coordenada: D74, valor: MAYORDOMIA DE LA EMPRESA GANADERA SOSTENIBLE
+Coordenada: E74, valor: 733403.0
+Coordenada: F74, valor: 1.0
+Coordenada: G74, valor: 3293982.0
+Coordenada: H74, valor: 30.0
+Coordenada: I74, valor: CERRADA
+Coordenada: J74, valor: 3067431.0
+Coordenada: K74, valor: MONTAÑITA - VEREDA LA UNIÓN PENEYA
+Coordenada: L74, valor: LUNES A SABADO 13:00 - 21:00
+Coordenada: M74, valor: Municipio de La Montañita-Escuela Miramar
+Coordenada: O74, valor: T-III 2025
+Coordenada: P74, valor: 2025-07-26 00:00:00
+Coordenada: Q74, valor: 2026-04-25 00:00:00
+Coordenada: R74, valor: 2026-10-25 00:00:00
+Coordenada: S74, valor: PABLO CASTRO SANZA
+Coordenada: T74, valor: PABLO CASTRO SANZA
+Coordenada: C75, valor: TECNICO
+Coordenada: D75, valor: PROCESAMIENTO DE DERIVADOS LACTEOS
+Coordenada: E75, valor: 936193.0
+Coordenada: F75, valor: 1.0
+Coordenada: G75, valor: 3335071.0
+Coordenada: H75, valor: 18.0
+Coordenada: I75, valor: CERRADA
+Coordenada: K75, valor: FLORENCIA
+Coordenada: L75, valor: LUNES A SABADO 6:00 - 14:00
+Coordenada: M75, valor: PLANTA, GRANJA.
+Coordenada: O75, valor: T-III 2025
+Coordenada: P75, valor: 2025-09-11 00:00:00
+Coordenada: Q75, valor: 2026-06-14 00:00:00
+Coordenada: R75, valor: 2026-12-10 00:00:00
+Coordenada: S75, valor: MARICEL VARON TORRES
+Coordenada: T75, valor: MARICEL VARON TORRES
+Coordenada: C76, valor: TECNOLOGO
+Coordenada: D76, valor: PRODUCCIÓN GANADERA
+Coordenada: E76, valor: 723106.0
+Coordenada: F76, valor: 102.0
+Coordenada: G76, valor: 3407847.0
+Coordenada: H76, valor: 27.0
+Coordenada: I76, valor: CERRADA
+Coordenada: J76, valor: 1724211.0
+Coordenada: K76, valor: FLORENCIA
+Coordenada: L76, valor: LUNES A SABADO 6:00 - 14:00
+Coordenada: M76, valor: 
+GRANJA 
+Coordenada: N76, valor: 24.0
+Coordenada: O76, valor: T-V 2025
+Coordenada: P76, valor: 2025-12-11 00:00:00
+Coordenada: Q76, valor: =+EDATE(P76,18)-1
+Coordenada: R76, valor: =+EDATE(P76,24)-1
+Coordenada: S76, valor: CESAR FERNANDO MARLES
+Coordenada: T76, valor: CESAR FERNANDO MARLES
+Coordenada: H77, valor: =SUM(H71:H76)
+Coordenada: Q77, valor: 8.0
+Coordenada: B79, valor: RED DE CONOCIMIENTO
+Coordenada: C79, valor: NIVEL
+Coordenada: D79, valor: NOMBRE DEL PROGRAMA
+Coordenada: E79, valor: CODIGO DE PROGRAMA
+Coordenada: F79, valor: VERSION
+Coordenada: G79, valor: FICHA 
+Coordenada: H79, valor: APRENDICES  MATRICULADOS
+Coordenada: I79, valor: TIPO DE OFERTA
+Coordenada: J79, valor: CÓDIGO PROYECTO
+Coordenada: K79, valor: MUNICIPIO
+Coordenada: L79, valor: HORARIO
+Coordenada: M79, valor: AMBIENTE
+Coordenada: N79, valor: DURACION
+Coordenada: O79, valor: AÑO /TRIMESTRE  DE INICI0
+Coordenada: P79, valor: FECHA INICIO
+Coordenada: Q79, valor: FECHA FINAL ETAPA LECTIVA
+Coordenada: R79, valor: FECHA TERMINACION
+Coordenada: S79, valor: INSTRUCTOR TECNICO 2025
+Coordenada: T79, valor: INSTRUCTOR TECNICO 2026
+Coordenada: U79, valor: APOYO TECNICO
+INGLES
+Coordenada: V79, valor: TRANSVERSALES
+Coordenada: A80, valor: 8.0
+Coordenada: B80, valor: AGRICOLA
+Coordenada: C80, valor: TECNICO
+Coordenada: D80, valor: MANEJO DE LA PRODUCCIÓN AGROECOLOGICA
+Coordenada: E80, valor: 733105.0
+Coordenada: F80, valor: 1.0
+Coordenada: G80, valor: 3323440.0
+Coordenada: H80, valor: 20.0
+Coordenada: I80, valor: CERRADA
+Coordenada: K80, valor: FLORENCIA
+Coordenada: L80, valor: LUNES A SABADO 12:00 - 20:00 
+Coordenada: M80, valor: GRANJA 
+Coordenada: N80, valor: 14.0
+Coordenada: O80, valor: T-III 2025
+Coordenada: P80, valor: 2025-09-01 00:00:00
+Coordenada: Q80, valor: 2026-05-31 00:00:00
+Coordenada: R80, valor: 2026-11-30 00:00:00
+Coordenada: S80, valor: DINA LORENA REYES
+Coordenada: T80, valor: DINA LORENA REYES
+Coordenada: C81, valor: TECNICO
+Coordenada: D81, valor: MANEJO DE LA PRODUCCIÓN AGROECOLOGICA
+Coordenada: E81, valor: 733105.0
+Coordenada: F81, valor: 1.0
+Coordenada: G81, valor: 3323458.0
+Coordenada: H81, valor: 20.0
+Coordenada: I81, valor: CERRADA
+Coordenada: K81, valor: FLORENCIA
+Coordenada: L81, valor: LUNES A SABADO 12:00 - 20:00 
+Coordenada: M81, valor: GRANJA 
+Coordenada: O81, valor: T-III 2025
+Coordenada: P81, valor: 2025-09-01 00:00:00
+Coordenada: Q81, valor: 2026-05-31 00:00:00
+Coordenada: R81, valor: 2026-11-30 00:00:00
+Coordenada: S81, valor: YISETH ALEXANDRA BUITRAGO SALAZAR
+Coordenada: T81, valor: CESAR GASCA
+Coordenada: H82, valor: =SUM(H80:H81)
+Coordenada: Q82, valor: 1.0
+Coordenada: B84, valor: RED DE CONOCIMIENTO
+Coordenada: C84, valor: NIVEL
+Coordenada: D84, valor: NOMBRE DEL PROGRAMA
+Coordenada: E84, valor: CODIGO DE PROGRAMA
+Coordenada: F84, valor: VERSION
+Coordenada: G84, valor: FICHA 
+Coordenada: H84, valor: APRENDICES  MATRICULADOS
+Coordenada: I84, valor: TIPO DE OFERTA
+Coordenada: J84, valor: CÓDIGO PROYECTO
+Coordenada: K84, valor: MUNICIPIO
+Coordenada: L84, valor: HORARIO
+Coordenada: M84, valor: AMBIENTE
+Coordenada: N84, valor: DURACION
+Coordenada: O84, valor: AÑO /TRIMESTRE  DE INICI0
+Coordenada: P84, valor: FECHA INICIO
+Coordenada: Q84, valor: FECHA FINAL ETAPA LECTIVA
+Coordenada: R84, valor: FECHA TERMINACION
+Coordenada: S84, valor: INSTRUCTOR TECNICO 2025
+Coordenada: T84, valor: INSTRUCTOR TECNICO 2026
+Coordenada: U84, valor: APOYO TECNICO
+INGLES
+Coordenada: V84, valor: TRANSVERSALES
+Coordenada: A85, valor: 8.0
+Coordenada: B85, valor: ACUICOLA
+Coordenada: C85, valor: OPERARIO
+Coordenada: D85, valor: PISCICULTURA
+Coordenada: E85, valor: 761513.0
+Coordenada: F85, valor: 2.0
+Coordenada: G85, valor: 3405403.0
+Coordenada: H85, valor: 20.0
+Coordenada: I85, valor: CERRADA
+Coordenada: K85, valor: FLORENCIA
+Coordenada: L85, valor: LUNES A SABADO 12:00 - 20:00 
+Coordenada: M85, valor: GRANJA 
+Coordenada: N85, valor: 6.0
+Coordenada: O85, valor: T-V 2025
+Coordenada: P85, valor: 2025-12-04 00:00:00
+Coordenada: Q85, valor: 2026-03-03 00:00:00
+Coordenada: R85, valor: 2026-06-03 00:00:00
+Coordenada: S85, valor: GUSTAVO ADOLFO JURIS TORREGROSA
+Coordenada: T85, valor: GUSTAVO ADOLFO JURIS TORREGROSA
+Coordenada: U85, valor: SE REQUIERE AMPLIAR
+Coordenada: H86, valor: =SUM(H85)
+Coordenada: Q86, valor: 1.0
+Coordenada: B88, valor: RED DE CONOCIMIENTO
+Coordenada: C88, valor: NIVEL
+Coordenada: D88, valor: NOMBRE DEL PROGRAMA
+Coordenada: E88, valor: CODIGO          DE PROGRAMA
+Coordenada: F88, valor: VERSION
+Coordenada: G88, valor: FICHA 
+Coordenada: H88, valor: APRENDICES  MATRICULADOS
+Coordenada: I88, valor: TIPO DE OFERTA
+Coordenada: J88, valor: CÓDIGO PROYECTO
+Coordenada: K88, valor: MUNICIPIO
+Coordenada: L88, valor: HORARIO
+Coordenada: M88, valor: AMBIENTE
+Coordenada: N88, valor: DURACION
+Coordenada: O88, valor: AÑO /TRIMESTRE  DE INICI0
+Coordenada: P88, valor: FECHA INICIO
+Coordenada: Q88, valor: FECHA FINAL ETAPA LECTIVA
+Coordenada: R88, valor: FECHA TERMINACION
+Coordenada: S88, valor: INSTRUCTOR TECNICO 2025
+Coordenada: T88, valor: INSTRUCTOR TECNICO 2026
+Coordenada: U88, valor: APOYO TECNICO
+INGLES
+Coordenada: V88, valor: TRANSVERSALES
+Coordenada: B89, valor: CONSTRUCCIÓN
+Coordenada: C89, valor: TECNICO
+Coordenada: D89, valor: CONSTRUCCIÓN DE EDIFICACIONES
+Coordenada: E89, valor: 836138.0
+Coordenada: F89, valor: 1.0
+Coordenada: G89, valor: 3363131.0
+Coordenada: H89, valor: 31.0
+Coordenada: I89, valor: CERRADA
+Coordenada: J89, valor: 3048490.0
+Coordenada: K89, valor: CURILLO
+Coordenada: L89, valor: LUNES A SABADO    16:00-23:59
+Coordenada: M89, valor: CURILLO
+Coordenada: N89, valor: 15.0
+Coordenada: O89, valor: T-IV 2025
+Coordenada: P89, valor: 2025-10-15 00:00:00
+Coordenada: Q89, valor: 2026-07-15 00:00:00
+Coordenada: R89, valor: 2027-01-14 00:00:00
+Coordenada: S89, valor: ALEXANDER MARIN
+Coordenada: T89, valor: ALEXANDER MARIN
+Coordenada: C90, valor: TECNICO
+Coordenada: D90, valor: CONSTRUCCIÓN DE EDIFICACIONES
+Coordenada: E90, valor: 836138.0
+Coordenada: F90, valor: 1.0
+Coordenada: G90, valor: 3394574.0
+Coordenada: H90, valor: 31.0
+Coordenada: I90, valor: CERRADA
+Coordenada: J90, valor: 3048490.0
+Coordenada: K90, valor: SOLANO
+Coordenada: L90, valor: LUNES A SABADO 16:00 - 23:59 
+Coordenada: M90, valor: INSTITUCIÓN EDUCATIVA  CAMPO ELIAS MARULANDA DEL MUNICIPIO DE SOLANO
+Coordenada: N90, valor: 15.0
+Coordenada: O90, valor: T-IV 2025
+Coordenada: P90, valor: 2025-11-19 00:00:00
+Coordenada: Q90, valor: 2026-08-19 00:00:00
+Coordenada: R90, valor: 2027-02-18 00:00:00
+Coordenada: S90, valor: WERNER MOSLER CAICEDO
+Coordenada: T90, valor: WERNER MOSLER CAICEDO
+Coordenada: H91, valor: =SUM(H89:H90)
+Coordenada: Q91, valor: 4.0
+Coordenada: B93, valor: RED DE CONOCIMIENTO
+Coordenada: C93, valor: NIVEL
+Coordenada: D93, valor: NOMBRE DEL PROGRAMA
+Coordenada: E93, valor: CODIGO DE PROGRAMA
+Coordenada: F93, valor: VERSION
+Coordenada: G93, valor: FICHA 
+Coordenada: H93, valor: APRENDICES  MATRICULADOS
+Coordenada: I93, valor: TIPO DE OFERTA
+Coordenada: J93, valor: CÓDIGO PROYECTO
+Coordenada: K93, valor: MUNICIPIO
+Coordenada: L93, valor: HORARIO
+Coordenada: M93, valor: AMBIENTE
+Coordenada: N93, valor: DURACION
+Coordenada: O93, valor: AÑO /TRIMESTRE  DE INICI0
+Coordenada: P93, valor: FECHA INICIO
+Coordenada: Q93, valor: FECHA FINAL ETAPA LECTIVA
+Coordenada: R93, valor: FECHA TERMINACION
+Coordenada: S93, valor: INSTRUCTOR TECNICO 2025
+Coordenada: T93, valor: APOYO TECNICO
+Coordenada: U93, valor: APOYO TECNICO
+INGLES
+Coordenada: V93, valor: TRANSVERSALES
+Coordenada: A94, valor: 12.0
+Coordenada: B94, valor: AUTOMOTOR
+Coordenada: C94, valor: TECNICO
+Coordenada: D94, valor: MANTENIMIENTO ELECTRICO Y CONTROL ELECTRONICO DE AUTOMOTORES
+Coordenada: E94, valor: 838200.0
+Coordenada: F94, valor: 1.0
+Coordenada: G94, valor: 3295020.0
+Coordenada: H94, valor: 25.0
+Coordenada: I94, valor: CERRADA
+Coordenada: J94, valor: 2134008.0
+Coordenada: K94, valor: FLORENCIA
+Coordenada: L94, valor: LUNES A SABADO 07:00-14:00
+Coordenada: M94, valor: 101.0
+Coordenada: O94, valor: T-III 2025
+Coordenada: P94, valor: 2025-08-01 00:00:00
+Coordenada: Q94, valor: 2026-05-05 00:00:00
+Coordenada: R94, valor: 2026-10-31 00:00:00
+Coordenada: S94, valor: JORGE ALFREDO CHIQUILLO
+Coordenada: T94, valor: JORGE ALFREDO CHIQUILLO
+Coordenada: U94, valor: SE REQUIERE AMPLIAR
+Coordenada: H95, valor: =SUM(H94)
+Coordenada: B97, valor: RED DE CONOCIMIENTO
+Coordenada: C97, valor: NIVEL
+Coordenada: D97, valor: NOMBRE DEL PROGRAMA
+Coordenada: E97, valor: CODIGO DE PROGRAMA
+Coordenada: F97, valor: VERSION
+Coordenada: G97, valor: FICHA 
+Coordenada: H97, valor: APRENDICES  MATRICULADOS
+Coordenada: I97, valor: TIPO DE OFERTA
+Coordenada: J97, valor: CÓDIGO PROYECTO
+Coordenada: K97, valor: MUNICIPIO
+Coordenada: L97, valor: HORARIO
+Coordenada: M97, valor: AMBIENTE
+Coordenada: N97, valor: DURACION
+Coordenada: O97, valor: AÑO /TRIMESTRE  DE INICI0
+Coordenada: P97, valor: FECHA INICIO
+Coordenada: Q97, valor: FECHA FINAL ETAPA LECTIVA
+Coordenada: R97, valor: FECHA TERMINACION
+Coordenada: S97, valor: INSTRUCTOR TECNICO 2025
+Coordenada: T97, valor: APOYO TECNICO
+Coordenada: U97, valor: APOYO TECNICO
+INGLES
+Coordenada: V97, valor: TRANSVERSALES
+Coordenada: A98, valor: 12.0
+Coordenada: B98, valor: ELECTRICIDAD
+Coordenada: C98, valor: TECNICO
+Coordenada: D98, valor: INSTALACIÓN DE SISTEMAS ELECTRICOS RESIDECIALES Y COMERCIALES
+Coordenada: E98, valor: 832202.0
+Coordenada: F98, valor: 2.0
+Coordenada: G98, valor: 3310734.0
+Coordenada: H98, valor: 30.0
+Coordenada: I98, valor: CERRADA
+Coordenada: J98, valor: 2729095.0
+Coordenada: K98, valor: DONCELLO 
+Coordenada: L98, valor: LUNES A SABADO 16:00 - 23:59
+
+Coordenada: M98, valor: Colegio Corazón Inmaculado de María
+Coordenada: O98, valor: T-III 2025
+Coordenada: P98, valor: 2025-08-15 00:00:00
+Coordenada: Q98, valor: 2026-05-14 00:00:00
+Coordenada: R98, valor: 2026-11-14 00:00:00
+Coordenada: S98, valor: MARBY ENNERIETD BETANCUR VILLADA
+Coordenada: T98, valor: MARBY ENNERIETD BETANCUR VILLADA
+Coordenada: C99, valor: TECNICO
+Coordenada: D99, valor: MANTENIMIENTO E INSTALACIÓN DE SISTEMAS SOLARES FOTOVOLTAICOS
+Coordenada: E99, valor: 832333.0
+Coordenada: F99, valor: 1.0
+Coordenada: G99, valor: 3398320.0
+Coordenada: H99, valor: 25.0
+Coordenada: I99, valor: CERRADA
+Coordenada: J99, valor: 3450973.0
+Coordenada: K99, valor: SAN JUAN DEL LOZADA - SAN VICENTE DEL CAGUAN
+Coordenada: L99, valor: LUNES A SABADO 
+16:00-23:59 NOCHE
+Coordenada: M99, valor: INSTITUCIÓN EDUCATIVA SAN JUAN DEL LOZADA
+Coordenada: O99, valor: T-IV 2025
+Coordenada: P99, valor: 2025-11-24 00:00:00
+Coordenada: Q99, valor: 2026-08-23 00:00:00
+Coordenada: R99, valor: 2027-02-23 00:00:00
+Coordenada: S99, valor: NORMAN DARIO MARIN CASTAÑO
+Coordenada: T99, valor: LUIS EDUARDO MANRIQUE
+Coordenada: U99, valor: SE REQUIERE AMPLIAR
+Coordenada: H100, valor: =SUM(H98:H99)
+Coordenada: M103, valor: FICHAS 
+Coordenada: B104, valor: OPERARIO
+Coordenada: C104, valor: TECNICO
+Coordenada: D104, valor: TEGNOLOGO
+Coordenada: E104, valor: APRENDICES  MATRICULADOS
+Coordenada: M104, valor: FLORENCIA
+Coordenada: N104, valor: =COUNTIF(K5:K99, "*FLORENCIA*")
+Coordenada: M105, valor: CARTAGENA DEL CHAIRA
+Coordenada: N105, valor: =COUNTIF(K5:K99, "*CARTAGAENA*")
+Coordenada: M106, valor: SAN VICENTE
+Coordenada: N106, valor: =COUNTIF(K5:K99, "*SAN*")
+Coordenada: M107, valor: SOLANO
+Coordenada: N107, valor: =COUNTIF(K5:K99, "*SOLANO*")
+Coordenada: M108, valor: DONCELLO
+Coordenada: N108, valor: =COUNTIF(K5:K99, "*DONCELLO*")
+Coordenada: M109, valor: MILAN 
+Coordenada: N109, valor: =COUNTIF(K5:K99, "*MILAN*")
+Coordenada: M110, valor: PAUJIL
+Coordenada: N110, valor: =COUNTIF(K5:K99, "*PAUJIL*")
+Coordenada: M111, valor: PUERTO RICO
+Coordenada: N111, valor: =COUNTIF(K11:K106, "*PUERTO*")
+Coordenada: M112, valor: MONTAÑITA
+Coordenada: N112, valor: =COUNTIF(K5:K99, "*MONTAÑITA*")
+Coordenada: M113, valor: SOLITA
+Coordenada: N113, valor: =COUNTIF(K6:K99, "*SOLITA*")
+Coordenada: M114, valor: CURILLO
+Coordenada: N114, valor: =COUNTIF(K5:K99, "*CURILLO*")

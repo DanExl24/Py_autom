@@ -1,0 +1,74 @@
+{
+ "FORMACIONES TITULADA REGULAR MODALIDAD PRESENCIAL Y VIRTUAL 2026": {
+  "nombre": "FORMACIONES TITULADA REGULAR MODALIDAD PRESENCIAL Y VIRTUAL 2026",
+  "coordenadas": "A1:V3",
+  "min_row": "1",
+  "max_row": "3",
+  "min_col": "1",
+  "max_col": "22"
+ },
+ "INFORMATICA, DISEÑO Y DESARROLLO DE SOFTWARE": {
+  "nombre": "INFORMATICA, DISEÑO Y DESARROLLO DE SOFTWARE",
+  "coordenadas": "B5:B18",
+  "min_row": "5",
+  "max_row": "18",
+  "min_col": "2",
+  "max_col": "2"
+ },
+ "GESTIÓN ADMINISTRATIVA Y SERVICIOS FINANCIEROS": {
+  "nombre": "GESTIÓN ADMINISTRATIVA Y SERVICIOS FINANCIEROS",
+  "coordenadas": "B22:B40",
+  "min_row": "22",
+  "max_row": "40",
+  "min_col": "2",
+  "max_col": "2"
+ },
+ "COMERCIO Y VENTAS": {
+  "nombre": "COMERCIO Y VENTAS",
+  "coordenadas": "B44:B45",
+  "min_row": "44",
+  "max_row": "45",
+  "min_col": "2",
+  "max_col": "2"
+ },
+ "SALUD": {
+  "nombre": "SALUD",
+  "coordenadas": "B49:B59",
+  "min_row": "49",
+  "max_row": "59",
+  "min_col": "2",
+  "max_col": "2"
+ },
+ "PECUARIA": {
+  "nombre": "PECUARIA",
+  "coordenadas": "B71:B76",
+  "min_row": "71",
+  "max_row": "76",
+  "min_col": "2",
+  "max_col": "2"
+ },
+ "AGRICOLA": {
+  "nombre": "AGRICOLA",
+  "coordenadas": "B80:B81",
+  "min_row": "80",
+  "max_row": "81",
+  "min_col": "2",
+  "max_col": "2"
+ },
+ "CONSTRUCCIÓN": {
+  "nombre": "CONSTRUCCIÓN",
+  "coordenadas": "B89:B90",
+  "min_row": "89",
+  "max_row": "90",
+  "min_col": "2",
+  "max_col": "2"
+ },
+ "ELECTRICIDAD": {
+  "nombre": "ELECTRICIDAD",
+  "coordenadas": "B98:B99",
+  "min_row": "98",
+  "max_row": "99",
+  "min_col": "2",
+  "max_col": "2"
+ }
+}

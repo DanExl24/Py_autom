@@ -23,15 +23,12 @@ def carpeta_principal(ID):
     )
     return resultado
 
-
 # Obtener archivos dentro de la carpeta principal
 oferta = carpeta_principal(CARPETA_PRINCIPAL).get("files",[])
 programas_regulares = {}
 for archivo in oferta:
     if (archivo['name']=='CONSOLIDADO PROGRAMAS REGULAR - 2026.xlsx'):
         programas_regulares = archivo
-
-
 
 # Hacer la peticion aq google drive al archivo de programas regulares por medio de la ID del archivo
 request = drive.files().get_media(fileId=programas_regulares['id'])
@@ -112,17 +109,7 @@ def obtener_rango_hoja(nombre):
 #with open("Red_conocimiento.json", "w") as seed_redes:
 #    json.dump(obtener_rango_hoja("FORMACIONES TITULADA REGULAR MODALIDAD PRESENCIAL Y VIRTUAL 2026"),seed_redes,ensure_ascii=False,indent=1)
 
-
-                        
-def consultar_valor(rango):
-    hoja = leer_hoja()
-    for fila in hoja.iter_rows():
-        for celda in fila:
-            if celda.value is not None:
-                if celda.coordinate in rango:
-                    print(f"Valor: {celda.value}")
-
-
+# Funcion para obtener las redes de conocimiento
 def obtener_redes():
     hoja = leer_hoja()
     #print(type(json))
@@ -130,6 +117,7 @@ def obtener_redes():
         for celda in fila:
             if celda.value is not None:
                 if(celda.value == "RED DE CONOCIMIENTO"):
+                    # Recorrer todas las redes sumando el valor de las filas
                     FilaRedes = celda.row+1
                     CeldaRedes = hoja.cell(FilaRedes,celda.column)
                     print(CeldaRedes.value)
@@ -160,26 +148,68 @@ with open("Red_conocimiento.json") as archivo:
         hoja_min_col = ar['min_col']
         hoja_max_col = ar['max_col']
 
+
+                        
+def consultar_valor(rango):
+    hoja = leer_hoja()
+    for fila in hoja.iter_rows():
+        for celda in fila:
+            if celda.value is not None:
+                if celda.coordinate in rango:
+                    print(f"Valor: {celda.value}")
+
+
+
+
+def obtener_encabezados():
+    hoja = leer_hoja()
+    encabezado = {}
+    for fila in hoja.iter_rows():
+        for celda in fila:
+            if celda.value is not None:
+                if(celda.value == "RED DE CONOCIMIENTO"):
+                    print(celda.coordinate)
+                    ColInicioFila = celda.row
+                    ColInicio = celda.column
+                    print("ColInicio:", ColInicio)
+                    print("hoja_max_col:", hoja_max_col)
+                    for rangoEncabezado in range(ColInicio,int(hoja_max_col) +1):
+                        encabezados = hoja.cell(row=ColInicioFila,column=rangoEncabezado) 
+                        encabezado[encabezados.value] = {
+                            "nombre" : encabezados.value,
+                            "coordenadas" : encabezados.coordinate,
+                            "row" : encabezados.row,
+                            "col" : encabezados.column
+                        }
+                    return encabezado
+#with open("Encabezados.json", "w") as encabezados:
+#    json.dump(obtener_encabezados(),encabezados,ensure_ascii=False,indent=1)
+
+
+
 def ficha_por_red():
     hoja = leer_hoja()
     redes = {}
     fichas = {}
+    encabezado = {}
     with open("Red_conocimiento.json") as redes_json:
         redes = json.load(redes_json)
-    for fila in hoja.iter_rows():
-        for celda in fila:
-            if celda.value is not None:
-                for key, value in redes.items():
-                    if(key == "INFORMATICA, DISEÑO Y DESARROLLO DE SOFTWARE"):
-                        coordenadas = redes[key]
-                        for rangoRed in range(int(coordenadas["min_row"]),int(coordenadas["max_row"]) + 1):
-                            for columna in range(int(coordenadas["min_col"])+1,int(hoja_max_col) + 1):
-                                celda = hoja.cell(row=rangoRed, column=columna)
-                                print(f"Coordenada = {celda.coordinate}")
-                                print(f"Valor: {celda.value}")
+    with open("Encabezados.json") as encabezados:
+        encabezado = json.load(encabezados)
+    for nombre_red, valores_red in redes.items():
+        fichas_red = {}
+        coordenadas = valores_red
+        for filas in range(int(coordenadas["min_row"]),int(coordenadas["max_row"]) + 1):
+            registro = {}
+            for nombre_encabezado,valores_encabezado in encabezado.items():
+                columna = valores_encabezado["col"]
+                registro[nombre_encabezado.strip()] = str(hoja.cell(row=filas,column=columna).value).strip()
+                if nombre_encabezado.strip() == "RED DE CONOCIMIENTO":
+                    registro["RED DE CONOCIMIENTO"] = nombre_red
+            numero_ficha = registro["FICHA"]
+            fichas_red[numero_ficha] = registro
+        fichas[nombre_red] = fichas_red
+    return fichas
+#with open("fichas.json","w") as fichas:
+#    json.dump(ficha_por_red(),fichas,ensure_ascii=False,indent=1)
 
-ficha_por_red()
-#obtener_redes()
-        
-# r=obtener_rango("INFORMATICA, DISEÑO Y DESARROLLO DE SOFTWARE")
-# consultar_valor(r)

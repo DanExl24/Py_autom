@@ -1,0 +1,128 @@
+{
+ "RED DE CONOCIMIENTO": {
+  "nombre": "RED DE CONOCIMIENTO",
+  "coordenadas": "B4",
+  "row": 4,
+  "col": 2
+ },
+ "NIVEL": {
+  "nombre": "NIVEL",
+  "coordenadas": "C4",
+  "row": 4,
+  "col": 3
+ },
+ "NOMBRE DEL PROGRAMA": {
+  "nombre": "NOMBRE DEL PROGRAMA",
+  "coordenadas": "D4",
+  "row": 4,
+  "col": 4
+ },
+ "CODIGO DE PROGRAMA": {
+  "nombre": "CODIGO DE PROGRAMA",
+  "coordenadas": "E4",
+  "row": 4,
+  "col": 5
+ },
+ "VERSION": {
+  "nombre": "VERSION",
+  "coordenadas": "F4",
+  "row": 4,
+  "col": 6
+ },
+ "FICHA ": {
+  "nombre": "FICHA ",
+  "coordenadas": "G4",
+  "row": 4,
+  "col": 7
+ },
+ "APRENDICES  MATRICULADOS": {
+  "nombre": "APRENDICES  MATRICULADOS",
+  "coordenadas": "H4",
+  "row": 4,
+  "col": 8
+ },
+ "TIPO DE OFERTA": {
+  "nombre": "TIPO DE OFERTA",
+  "coordenadas": "I4",
+  "row": 4,
+  "col": 9
+ },
+ "CÓDIGO PROYECTO": {
+  "nombre": "CÓDIGO PROYECTO",
+  "coordenadas": "J4",
+  "row": 4,
+  "col": 10
+ },
+ "MUNICIPIO": {
+  "nombre": "MUNICIPIO",
+  "coordenadas": "K4",
+  "row": 4,
+  "col": 11
+ },
+ "HORARIO": {
+  "nombre": "HORARIO",
+  "coordenadas": "L4",
+  "row": 4,
+  "col": 12
+ },
+ "AMBIENTE": {
+  "nombre": "AMBIENTE",
+  "coordenadas": "M4",
+  "row": 4,
+  "col": 13
+ },
+ "DURACION": {
+  "nombre": "DURACION",
+  "coordenadas": "N4",
+  "row": 4,
+  "col": 14
+ },
+ "AÑO /TRIMESTRE  DE INICI0": {
+  "nombre": "AÑO /TRIMESTRE  DE INICI0",
+  "coordenadas": "O4",
+  "row": 4,
+  "col": 15
+ },
+ "FECHA INICIO": {
+  "nombre": "FECHA INICIO",
+  "coordenadas": "P4",
+  "row": 4,
+  "col": 16
+ },
+ "FECHA FINAL ETAPA LECTIVA": {
+  "nombre": "FECHA FINAL ETAPA LECTIVA",
+  "coordenadas": "Q4",
+  "row": 4,
+  "col": 17
+ },
+ "FECHA TERMINACION": {
+  "nombre": "FECHA TERMINACION",
+  "coordenadas": "R4",
+  "row": 4,
+  "col": 18
+ },
+ "INSTRUCTOR TECNICO 2025": {
+  "nombre": "INSTRUCTOR TECNICO 2025",
+  "coordenadas": "S4",
+  "row": 4,
+  "col": 19
+ },
+ "INSTRUCTOR TECNICO 2026": {
+  "nombre": "INSTRUCTOR TECNICO 2026",
+  "coordenadas": "T4",
+  "row": 4,
+  "col": 20
+ },
+ "APOYO TECNICO\nINGLES": {
+  "nombre": "APOYO TECNICO\nINGLES",
+  "coordenadas": "U4",
+  "row": 4,
+  "col": 21
+ },
+ "TRANSVERSALES": {
+  "nombre": "TRANSVERSALES",
+  "coordenadas": "V4",
+  "row": 4,
+  "col": 22
+ }
+}

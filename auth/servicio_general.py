@@ -10,12 +10,17 @@ SCOPES = [
     "https://www.googleapis.com/auth/spreadsheets.readonly"
 ]
 
+# Get the path relative to this script
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+TOKEN_PATH = os.path.join(BASE_DIR, "json", "token.json")
+CREDENTIALS_PATH = os.path.join(BASE_DIR, "json", "credentials.json")
+
 def obtener_credenciales():
     creds = None
 
-    if os.path.exists("token.json"):
+    if os.path.exists(TOKEN_PATH):
         creds = Credentials.from_authorized_user_file(
-            "token.json",
+            TOKEN_PATH,
             SCOPES
         )
 
@@ -26,13 +31,13 @@ def obtener_credenciales():
 
         else:
             flow = InstalledAppFlow.from_client_secrets_file(
-                "credentials.json",
+                CREDENTIALS_PATH,
                 SCOPES
             )
 
             creds = flow.run_local_server(port=0)
 
-        with open("token.json", "w") as token:
+        with open(TOKEN_PATH, "w") as token:
             token.write(creds.to_json())
     return creds
 

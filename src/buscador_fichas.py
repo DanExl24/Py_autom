@@ -1,5 +1,5 @@
 import customtkinter as ctk
-from main import buscar_ficha
+from src.constructor import buscar_ficha
 
 ctk.set_appearance_mode("System")      # System, Light o Dark
 ctk.set_default_color_theme("blue")

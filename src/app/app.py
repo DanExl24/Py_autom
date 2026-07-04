@@ -1,0 +1,1 @@
+# Crear customTinker con el json de fichas.json

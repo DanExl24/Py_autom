@@ -1,4 +1,4 @@
-from servicio_general import obtener_servicio_drive,obtener_servicio_sheets
+from auth.servicio_general import obtener_servicio_drive,obtener_servicio_sheets
 import webbrowser
 import json
 import re
@@ -59,17 +59,16 @@ def constructor():
 
                 return indice
     indice = construir_fichas()
-    with open("fichas.json", "w") as archivo:
+    with open("fichasSimple.json", "w") as archivo:
         json.dump(indice, archivo)
 
 
 def buscar_ficha(FICHA):
-    with open("fichas.json") as archivo:
+    with open("fichasSimple.json") as archivo:
         fichas = json.load(archivo)
     ficha = fichas.get((f"{FICHA}"))
     if(ficha['url']):
         print(f"Abriendo {ficha["nombre"]}...\nmimeType:{ficha["mimetype"]}")
         webbrowser.open(ficha["url"])
-        
     else:
         print(f"No existe esta ficha")

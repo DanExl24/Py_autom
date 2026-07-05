@@ -28,11 +28,23 @@ const toggleDarkMode = () => {
   }
 }
 
+const normalizeTrimestreJS = (str: string): string => {
+  if (!str) return str
+  const s = str.trim().toUpperCase()
+  const match = s.match(/T\s*-\s*(I{1,3}|IV|V)\s*[-/ ]\s*(\d{4})/)
+  if (match) {
+    return `T-${match[1]}-${match[2]}`
+  }
+  return s
+}
+
 // Carga inicial de datos
-const loadData = async () => {
+const loadData = async (silent = false) => {
   try {
-    loading.value = true
-    error.value = null
+    if (!silent) {
+      loading.value = true
+      error.value = null
+    }
     const res = await fetch('/api/fichas')
     if (!res.ok) throw new Error('No se pudieron obtener los datos de las fichas')
     const data = await res.json()
@@ -66,15 +78,22 @@ const loadData = async () => {
           "CODIGO DE PROGRAMA": parseInt(infoObj["CODIGO DE PROGRAMA"]) || 0,
           VERSION: parseInt(infoObj.VERSION) || 1,
           "CÓDIGO PROYECTO": parseInt(infoObj["CÓDIGO PROYECTO"]) || 0,
+          "AÑO /TRIMESTRE DE INICIO": normalizeTrimestreJS(infoObj["AÑO /TRIMESTRE DE INICIO"] || ''),
           DURACION_CALCULADA: duracionCalculada
         })
       }
     }
     rawFichas.value = list
   } catch (e: any) {
-    error.value = e.message || 'Error al conectar'
+    if (!silent) {
+      error.value = e.message || 'Error al conectar'
+    } else {
+      console.error('Silent refresh failed:', e)
+    }
   } finally {
-    loading.value = false
+    if (!silent) {
+      loading.value = false
+    }
   }
 }
 
@@ -223,13 +242,24 @@ const exportarJSON = () => {
 const imprimirReporte = () => {
   window.print()
 }
+
+const abrirCtkBuscador = async () => {
+  try {
+    const res = await fetch('/api/abrir-buscador-gui', { method: 'POST' })
+    if (!res.ok) {
+      throw new Error('No se pudo lanzar la interfaz flotante')
+    }
+  } catch (e: any) {
+    alert(e.message || 'Error al iniciar la aplicación de escritorio')
+  }
+}
 </script>
 
 <template>
   <div class="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 flex flex-col md:flex-row transition-colors duration-200">
     
     <!-- Sidebar Azul Petróleo (#1E3A5F) -->
-    <aside class="w-full md:w-64 bg-primary text-white flex flex-col shrink-0 border-r border-primary-dark/40 print:hidden">
+    <aside class="w-full md:w-64 bg-primary text-white flex flex-col shrink-0 border-r border-primary-dark/40 print:hidden md:sticky md:top-0 md:h-screen">
       
       <!-- Logo / Header -->
       <div class="p-6 border-b border-primary-dark/40 flex items-center justify-between">
@@ -288,15 +318,26 @@ const imprimirReporte = () => {
         </button>
       </nav>
 
-      <!-- Panel Inferior (Modo Oscuro) -->
-      <div class="p-4 border-t border-primary-dark/40 flex items-center justify-between">
-        <span class="text-xs font-semibold text-slate-300">Modo Oscuro</span>
+      <!-- Panel Inferior (Modo Oscuro y Herramientas) -->
+      <div class="p-4 border-t border-primary-dark/40 flex flex-col gap-3">
         <button 
-          @click="toggleDarkMode"
-          class="p-2 rounded-lg bg-primary-dark/60 hover:bg-primary-dark text-white transition-colors duration-150"
+          @click="abrirCtkBuscador"
+          class="w-full flex items-center justify-center gap-2 px-3 py-2 bg-primary-dark/60 hover:bg-primary-dark text-slate-200 hover:text-white rounded-lg text-xs font-bold transition-all border border-primary-dark/30 shadow-sm"
+          title="Abrir buscador flotante CustomTkinter en la PC"
         >
-          <Icon :icon="isDark ? 'lucide:sun' : 'lucide:moon'" class="w-4 h-4" />
+          <Icon icon="lucide:terminal" class="w-4 h-4 text-success" />
+          Lanzar Buscador GUI
         </button>
+        
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-semibold text-slate-300">Modo Oscuro</span>
+          <button 
+            @click="toggleDarkMode"
+            class="p-2 rounded-lg bg-primary-dark/60 hover:bg-primary-dark text-white transition-colors duration-150"
+          >
+            <Icon :icon="isDark ? 'lucide:sun' : 'lucide:moon'" class="w-4 h-4" />
+          </button>
+        </div>
       </div>
 
     </aside>
@@ -316,7 +357,7 @@ const imprimirReporte = () => {
         <h3 class="text-lg font-black text-slate-850 dark:text-slate-100 mb-2">Error de conexión</h3>
         <p class="text-sm text-slate-500 dark:text-slate-400 mb-6">{{ error }}</p>
         <button 
-          @click="loadData"
+          @click="loadData(false)"
           class="px-4 py-2 bg-primary hover:bg-primary-light text-white font-bold rounded-xl text-sm shadow transition-colors"
         >
           Reintentar Carga
@@ -431,7 +472,7 @@ const imprimirReporte = () => {
             </h2>
           </div>
 
-          <SincronizarExcel @sync-complete="loadData" />
+          <SincronizarExcel @sync-complete="loadData(true)" />
         </div>
 
         <!-- PESTAÑA 5: REPORTES -->

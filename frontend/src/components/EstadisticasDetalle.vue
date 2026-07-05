@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref, computed, watch } from 'vue'
 import { Icon } from '@iconify/vue'
 import type { Ficha } from '../types'
 
@@ -20,7 +20,8 @@ const tabs = [
   { id: 'fechas', name: 'Fechas y Plazos', icon: 'lucide:calendar' },
   { id: 'municipios', name: 'Municipios y Oferta', icon: 'lucide:map-pin' },
   { id: 'proyectos', name: 'Proyectos y Ambientes', icon: 'lucide:layers' },
-  { id: 'indicadores', name: 'Indicadores Pro', icon: 'lucide:activity' }
+  { id: 'indicadores', name: 'Indicadores Pro', icon: 'lucide:activity' },
+  { id: 'trimestres', name: 'Años-Trimestres', icon: 'lucide:calendar-range' }
 ]
 
 // --- COMPUTACIONES ---
@@ -276,6 +277,51 @@ const indicadoresPro = computed(() => {
     promedioFicha: totalFichas ? (totalAprendices / totalFichas).toFixed(1) : '0'
   }
 })
+
+// --- 8. AÑOS-TRIMESTRES ---
+const selectedTrimestreDetalle = ref<string | null>(null)
+
+const parseTrimestre = (str: string) => {
+  const yearMatch = str.match(/\d{4}/)
+  const year = yearMatch ? parseInt(yearMatch[0]) : 0
+  let val = 0
+  if (str.toUpperCase().includes('IV')) val = 4
+  else if (str.toUpperCase().includes('III')) val = 3
+  else if (str.toUpperCase().includes('II')) val = 2
+  else if (str.toUpperCase().includes('I')) val = 1
+  return { year, val }
+}
+
+const estadisticasTrimestres = computed(() => {
+  const map: Record<string, { trimestre: string; fichas: Ficha[]; totalAprendices: number }> = {}
+  props.fichas.forEach(f => {
+    const trim = f["AÑO /TRIMESTRE DE INICIO"] || 'SIN REGISTRAR'
+    if (!map[trim]) {
+      map[trim] = { trimestre: trim, fichas: [], totalAprendices: 0 }
+    }
+    map[trim].fichas.push(f)
+    map[trim].totalAprendices += f["APRENDICES MATRICULADOS"]
+  })
+  
+  return Object.values(map).sort((a, b) => {
+    const pa = parseTrimestre(a.trimestre)
+    const pb = parseTrimestre(b.trimestre)
+    if (pa.year !== pb.year) return pa.year - pb.year
+    return pa.val - pb.val
+  })
+})
+
+const fichasTrimestreSeleccionado = computed(() => {
+  if (!selectedTrimestreDetalle.value) return []
+  const found = estadisticasTrimestres.value.find(t => t.trimestre === selectedTrimestreDetalle.value)
+  return found ? found.fichas : []
+})
+
+watch(() => estadisticasTrimestres.value, (newVal) => {
+  if (newVal.length && !selectedTrimestreDetalle.value) {
+    selectedTrimestreDetalle.value = newVal[0].trimestre
+  }
+}, { immediate: true })
 </script>
 
 <template>
@@ -582,8 +628,8 @@ const indicadoresPro = computed(() => {
               <span>Ambiente: {{ a.ambiente }}</span>
               <span class="text-success">{{ a.count }} fichas ocupando</span>
             </div>
-            <div class="text-[10px] text-slate-400 flex flex-wrap gap-1">
-              Fichas: <span v-for="f in a.fichas" :key="f" class="bg-slate-100 dark:bg-slate-700 px-1 rounded">{{ f }}</span>
+            <div class="text-[10px] text-slate-500 dark:text-slate-400 flex flex-wrap items-center gap-1.5 mt-1">
+              Fichas: <span v-for="f in a.fichas" :key="f" class="bg-slate-100 dark:bg-slate-700/60 px-1.5 py-0.5 rounded text-slate-700 dark:text-slate-200 font-bold border border-slate-200 dark:border-slate-600/40">{{ f }}</span>
             </div>
           </div>
           <div v-if="!ambientesCompartidos.length" class="text-center py-12 text-xs text-slate-400 italic">
@@ -619,6 +665,85 @@ const indicadoresPro = computed(() => {
         <h4 class="text-2xl font-black text-slate-800 dark:text-slate-100 mb-1">{{ indicadoresPro.promedioFicha }}</h4>
         <p class="text-xs font-bold text-slate-400 uppercase tracking-wide">Tamaño Promedio de Ficha</p>
         <span class="block text-[10px] text-slate-500 mt-2">Promedio de aprendices matriculados</span>
+      </div>
+
+    </div>
+
+    <!-- 8. AÑOS-TRIMESTRES -->
+    <div v-if="activeSubTab === 'trimestres'" class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      
+      <!-- Listado de Trimestres -->
+      <div class="lg:col-span-1 bg-white dark:bg-slate-800 p-5 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm flex flex-col h-[480px]">
+        <h3 class="text-xs font-bold text-slate-700 dark:text-slate-200 uppercase tracking-widest mb-4 flex items-center gap-1.5">
+          <Icon icon="lucide:calendar-range" class="w-4.5 h-4.5 text-secondary" />
+          Distribución por Trimestres
+        </h3>
+        
+        <div class="flex-1 overflow-y-auto space-y-2 pr-1">
+          <div 
+            v-for="t in estadisticasTrimestres" 
+            :key="t.trimestre"
+            @click="selectedTrimestreDetalle = t.trimestre"
+            class="p-3.5 rounded-xl border cursor-pointer transition-all duration-155 flex items-center justify-between"
+            :class="[
+              selectedTrimestreDetalle === t.trimestre
+                ? 'border-secondary bg-secondary/5 dark:bg-secondary/10 shadow-sm'
+                : 'border-slate-100 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 bg-slate-50/50 dark:bg-slate-900/30'
+            ]"
+          >
+            <div>
+              <span class="block text-sm font-bold text-slate-800 dark:text-slate-100 uppercase">{{ t.trimestre }}</span>
+              <span class="text-[10px] text-slate-400 font-semibold">{{ t.totalAprendices }} aprendices matriculados</span>
+            </div>
+            <span class="px-2.5 py-0.5 rounded-lg text-xs font-black bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-200">
+              {{ t.fichas.length }}
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Detalle de Fichas del Trimestre Seleccionado -->
+      <div class="lg:col-span-2 bg-white dark:bg-slate-800 p-5 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm flex flex-col h-[480px]">
+        <h3 class="text-xs font-bold text-slate-700 dark:text-slate-200 uppercase tracking-widest mb-4 flex items-center justify-between">
+          <span class="flex items-center gap-1.5 flex-1 min-w-0">
+            <Icon icon="lucide:list" class="w-4.5 h-4.5 text-secondary shrink-0" />
+            <span class="truncate">Fichas Iniciadas en {{ selectedTrimestreDetalle || 'Selecciona un trimestre' }}</span>
+          </span>
+          <span class="text-[10px] text-slate-400 font-bold shrink-0">
+            {{ fichasTrimestreSeleccionado.length }} formaciones
+          </span>
+        </h3>
+
+        <div class="flex-1 overflow-y-auto border border-slate-100 dark:border-slate-800 rounded-xl pr-1">
+          <table class="w-full text-left text-xs border-collapse">
+            <thead>
+              <tr class="bg-slate-50 dark:bg-slate-700/50 font-bold text-slate-500 border-b border-slate-150 dark:border-slate-800">
+                <th class="p-3">Ficha</th>
+                <th class="p-3">Programa</th>
+                <th class="p-3">Municipio</th>
+                <th class="p-3 text-center">Matriculados</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+              <tr 
+                v-for="f in fichasTrimestreSeleccionado" 
+                :key="f.FICHA" 
+                @click="emit('select-ficha', f)"
+                class="hover:bg-slate-50/50 dark:hover:bg-slate-700/20 cursor-pointer transition-colors duration-100"
+              >
+                <td class="p-3 font-bold text-blue-900 dark:text-blue-400">{{ f.FICHA }}</td>
+                <td class="p-3 capitalize font-medium text-slate-700 dark:text-slate-200">{{ f["NOMBRE DEL PROGRAMA"].toLowerCase() }}</td>
+                <td class="p-3 capitalize text-slate-500 dark:text-slate-400">{{ f.MUNICIPIO.toLowerCase() }}</td>
+                <td class="p-3 text-center font-black text-slate-800 dark:text-slate-100">{{ f["APRENDICES MATRICULADOS"] }}</td>
+              </tr>
+              <tr v-if="!fichasTrimestreSeleccionado.length">
+                <td colspan="4" class="p-8 text-center text-slate-400 italic">
+                  Selecciona un trimestre a la izquierda para ver su desglose.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
 
     </div>

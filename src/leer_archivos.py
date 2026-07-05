@@ -20,7 +20,7 @@ def descargar_excel_desde_drive():
     drive = obtener_servicio_drive()
     
     print("Buscando el archivo Excel consolidado...")
-    resultado = drive.files().list(
+    resultado = drive.files().list(  # type: ignore
         q=f"'{CARPETA_PRINCIPAL}' in parents",
         fields="files(id,name,mimeType)"
     ).execute()
@@ -36,7 +36,7 @@ def descargar_excel_desde_drive():
         raise FileNotFoundError("No se encontró el archivo 'CONSOLIDADO PROGRAMAS REGULAR - 2026.xlsx' en Google Drive.")
         
     print(f"Descargando '{consolidado['name']}'...")
-    request = drive.files().get_media(fileId=consolidado['id'])
+    request = drive.files().get_media(fileId=consolidado['id'])  # type: ignore
     excel_memoria = io.BytesIO()
     downloader = MediaIoBaseDownload(excel_memoria, request)
     
@@ -119,6 +119,23 @@ def limpiar_valor(valor):
         
     return valor
 
+def normalizar_trimestre(valor):
+    if not isinstance(valor, str):
+        return valor
+    # Limpiar espacios múltiples y pasar a mayúsculas
+    s = valor.strip().upper()
+    
+    # Buscar patrón: T-[espacio]?[romano][separador][año]
+    # Ej: T-III-2024, T-III 2024, T- IV 2025, T- II-2025
+    import re
+    match = re.search(r'T\s*-\s*(I{1,3}|IV|V)\s*[-/ ]\s*(\d{4})', s)
+    if match:
+        romano = match.group(1).upper()
+        anio = match.group(2)
+        return f"T-{romano}-{anio}"
+        
+    return s
+
 def obtener_valor_celda(hoja, fila, columna):
     """Resuelve celdas combinadas (merged cells) en openpyxl para obtener el valor correcto."""
     for rango in hoja.merged_cells.ranges:
@@ -153,7 +170,7 @@ def extraer_fichas(excel_stream):
         if header_row:
             break
             
-    if not header_row:
+    if not header_row or not red_col:
         raise ValueError("No se pudo localizar el encabezado 'RED DE CONOCIMIENTO' en la hoja.")
         
     print(f"Cabecera detectada en Fila {header_row}, Columna {red_col}")
@@ -184,6 +201,11 @@ def extraer_fichas(excel_stream):
         for col, nombre_cabecera in encabezados:
             val_celda = obtener_valor_celda(hoja, fila, col)
             val_limpio = limpiar_valor(val_celda)
+            
+            # Normalizar el campo del Año / Trimestre de Inicio si es string
+            if nombre_cabecera == "AÑO /TRIMESTRE DE INICIO" and isinstance(val_limpio, str):
+                val_limpio = normalizar_trimestre(val_limpio)
+                
             registro[nombre_cabecera] = val_limpio
             
         ficha_id = registro.get("FICHA")

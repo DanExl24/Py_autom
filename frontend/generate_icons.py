@@ -36,14 +36,15 @@ def crear_icono(size, filename):
     # Escribir la letra "S" en el centro en color blanco
     texto = "S"
     
-    # Medir texto
-    if hasattr(font, "getbbox"):
-        # Pillow >= 9.2.0
+    try:
         bbox = draw.textbbox((0, 0), texto, font=font)
         text_w = bbox[2] - bbox[0]
         text_h = bbox[3] - bbox[1]
-    else:
-        text_w, text_h = draw.textsize(texto, font=font)
+    except AttributeError:
+        try:
+            text_w, text_h = draw.textsize(texto, font=font)
+        except AttributeError:
+            text_w, text_h = font.getsize(texto)
         
     # Calcular posición centrada
     x = (size - text_w) / 2

@@ -1,14 +1,42 @@
 <script setup lang="ts">
+import { ref } from 'vue'
 import { Icon } from '@iconify/vue'
 import type { Ficha } from '../types'
 
-defineProps<{
+const props = defineProps<{
   ficha: Ficha | null
 }>()
 
 const emit = defineEmits<{
   (e: 'close'): void
 }>()
+
+const openingProgramador = ref(false)
+const errorProgramador = ref<string | null>(null)
+
+const abrirProgramador = async () => {
+  if (!props.ficha) return
+  try {
+    openingProgramador.value = true
+    errorProgramador.value = null
+    const res = await fetch(`/api/abrir-programador/${props.ficha.FICHA}`)
+    if (!res.ok) {
+      const errData = await res.json()
+      throw new Error(errData.detail || 'Ficha no encontrada en Drive')
+    }
+    const data = await res.json()
+    if (data.url) {
+      window.open(data.url, '_blank')
+    }
+  } catch (e: any) {
+    errorProgramador.value = e.message || 'Error al abrir el programador'
+    setTimeout(() => {
+      errorProgramador.value = null
+    }, 4000)
+  } finally {
+    openingProgramador.value = false
+  }
+}
 </script>
 
 <template>
@@ -187,6 +215,11 @@ const emit = defineEmits<{
           </div>
         </div>
 
+        <!-- Mensaje de Error al abrir programador -->
+        <div v-if="errorProgramador" class="absolute bottom-20 right-6 left-6 p-3 bg-rose-50 dark:bg-rose-950/30 text-rose-900 dark:text-rose-400 rounded-lg text-xs font-semibold border border-rose-100 dark:border-rose-900/50 flex items-center gap-1.5 z-50">
+          <Icon icon="lucide:alert-circle" class="w-4 h-4 text-danger" />
+          {{ errorProgramador }}
+        </div>
       </div>
 
       <!-- Footer / Acciones -->
@@ -197,12 +230,25 @@ const emit = defineEmits<{
             {{ ficha ? (ficha["CÓDIGO PROYECTO"] || 'SIN CÓDIGO') : '' }}
           </span>
         </div>
-        <button 
-          @click="emit('close')"
-          class="px-6 py-2.5 bg-primary hover:bg-primary-light text-white font-bold rounded-xl text-sm transition-colors shadow-sm"
-        >
-          Entendido
-        </button>
+        <div class="flex items-center gap-2">
+          <button 
+            v-if="ficha"
+            @click="abrirProgramador"
+            :disabled="openingProgramador"
+            class="px-4 py-2 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 font-bold rounded-xl text-xs transition-colors shadow-sm flex items-center gap-1.5 border border-slate-200 dark:border-slate-700 disabled:opacity-50"
+            title="Abrir programador en Google Drive"
+          >
+            <Icon v-if="openingProgramador" icon="lucide:loader" class="w-3.5 h-3.5 animate-spin text-secondary" />
+            <Icon v-else icon="lucide:external-link" class="w-3.5 h-3.5 text-secondary" />
+            Programador
+          </button>
+          <button 
+            @click="emit('close')"
+            class="px-6 py-2.5 bg-primary hover:bg-primary-light text-white font-bold rounded-xl text-sm transition-colors shadow-sm"
+          >
+            Entendido
+          </button>
+        </div>
       </div>
     </div>
   </div>

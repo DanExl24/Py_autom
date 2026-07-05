@@ -1,7 +1,7 @@
 from fastapi import FastAPI, HTTPException, File, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, StreamingResponse
 import os
 import sys
 import json
@@ -25,7 +25,6 @@ FALLBACK_JSON_PATH = os.path.join(BASE_DIR, "fichas_test.json")
 
 # Agregar src al path de python para poder importar el módulo de extracción
 sys.path.append(os.path.join(BASE_DIR, "src"))
-from leer_archivos import extraer_fichas
 
 @app.get("/api/fichas")
 def get_fichas():
@@ -40,145 +39,70 @@ def get_fichas():
 
 @app.post("/api/actualizar")
 def actualizar_datos():
-    # Ejecuta leer_archivos.py para sincronizar con Google Drive o archivos locales de Excel
-    script_path = os.path.join(BASE_DIR, "src", "leer_archivos.py")
+    # Ejecuta antiguo_lector.py en segundo plano y transmite la salida (stdout) en tiempo real
+    script_path = os.path.join(BASE_DIR, "src", "antiguo_lector.py")
+    python_exe = os.path.join(BASE_DIR, "venv", "Scripts", "python.exe")
+    if not os.path.exists(python_exe):
+        python_exe = "python"
+        
+    def stream_process_output():
+        # Usar Popen con line buffering para capturar e imprimir logs de inmediato
+        process = subprocess.Popen(
+            [python_exe, script_path],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
+            text=True,
+            cwd=BASE_DIR,
+            bufsize=1
+        )
+        
+        # Leer línea por línea
+        if process.stdout:
+            for line in iter(process.stdout.readline, ""):
+                yield line
+                
+        process.wait()
+        if process.returncode != 0:
+            yield f"\n[ERROR] El script de sincronización falló con código {process.returncode}\n"
+        else:
+            yield "\n[COMPLETADO] Base de datos actualizada con éxito en caliente.\n"
+
+    return StreamingResponse(stream_process_output(), media_type="text/plain")
+
+@app.get("/api/abrir-programador/{ficha}")
+def abrir_programador(ficha: str):
+    try:
+        from constructor import buscar_ficha
+        url = buscar_ficha(ficha, abrir_navegador=False)
+        if not url:
+            raise HTTPException(status_code=404, detail=f"No se encontró el programador de Drive para la ficha {ficha}")
+        return {"status": "ok", "url": url}
+    except Exception as e:
+        raise HTTPException(
+            status_code=500,
+            detail=f"Error al abrir programador de Drive: {str(e)}"
+        )
+@app.post("/api/abrir-buscador-gui")
+def abrir_buscador_gui():
+    script_path = os.path.join(BASE_DIR, "src", "buscador_fichas.py")
     python_exe = os.path.join(BASE_DIR, "venv", "Scripts", "python.exe")
     if not os.path.exists(python_exe):
         python_exe = "python"
         
     try:
-        result = subprocess.run(
+        # Popen lanza en segundo plano sin esperar al término de la aplicación GUI
+        subprocess.Popen(
             [python_exe, script_path],
-            capture_output=True,
-            text=True,
-            check=True,
-            cwd=BASE_DIR
+            cwd=BASE_DIR,
+            creationflags=subprocess.CREATE_NEW_CONSOLE if os.name == 'nt' else 0
         )
-        return {"status": "ok", "message": "Datos actualizados correctamente", "output": result.stdout}
-    except subprocess.CalledProcessError as e:
+        return {"status": "ok", "message": "Buscador CustomTkinter GUI iniciado"}
+    except Exception as e:
         raise HTTPException(
             status_code=500,
-            detail=f"Error al ejecutar actualización: {e.stderr or e.stdout or str(e)}"
+            detail=f"No se pudo iniciar el buscador CustomTkinter: {str(e)}"
         )
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Error inesperado: {str(e)}")
 
-@app.post("/api/sincronizar")
-async def sincronizar_excel(file: UploadFile = File(...)):
-    # Validar formato de archivo
-    if not (file.filename.endswith('.xlsx') or file.filename.endswith('.xls')):
-        raise HTTPException(status_code=400, detail="Formato de archivo inválido. Debe ser un archivo Excel (.xlsx o .xls)")
-
-    try:
-        # Cargar los datos actuales antes de actualizar para comparar
-        antiguo_path = JSON_PATH if os.path.exists(JSON_PATH) else FALLBACK_JSON_PATH
-        antiguos_programas = set()
-        antiguos_instructores = set()
-        if os.path.exists(antiguo_path):
-            try:
-                with open(antiguo_path, "r", encoding="utf-8") as f:
-                    antiguos_datos = json.load(f)
-                    for red_name, fichas_dict in antiguos_datos.items():
-                        for info in fichas_dict.values():
-                            prog = info.get("NOMBRE DEL PROGRAMA")
-                            if prog: antiguos_programas.add(prog.strip().upper())
-                            inst = info.get("INSTRUCTOR TÉCNICO 2026") or info.get("INSTRUCTOR TÉCNICO 2025")
-                            if inst and inst != "None" and inst != "":
-                                antiguos_instructores.add(inst.strip().upper())
-            except Exception:
-                pass
-
-        # Leer archivo subido a memoria
-        contents = await file.read()
-        excel_stream = io.BytesIO(contents)
-
-        # Extraer fichas usando el script existente
-        datos_fichas = extraer_fichas(excel_stream)
-
-        # Validaciones de consistencia
-        if not datos_fichas:
-            raise ValueError("No se encontraron redes de conocimiento ni fichas estructuradas en el archivo.")
-
-        # Calcular métricas e instructores/programas nuevos
-        total_registros = 0
-        total_columnas = 0
-        nuevos_programas = set()
-        nuevos_instructores = set()
-
-        for red, fichas_dict in datos_fichas.items():
-            for info in fichas_dict.values():
-                total_registros += 1
-                if not total_columnas:
-                    total_columnas = len(info)
-                prog = info.get("NOMBRE DEL PROGRAMA")
-                if prog: nuevos_programas.add(prog.strip().upper())
-                inst = info.get("INSTRUCTOR TÉCNICO 2026") or info.get("INSTRUCTOR TÉCNICO 2025")
-                if inst and inst != "None" and inst != "":
-                    nuevos_instructores.add(inst.strip().upper())
-
-        programas_nuevos_cnt = len(nuevos_programas - antiguos_programas)
-        instructores_nuevos_cnt = len(nuevos_instructores - antiguos_instructores)
-
-        # Guardar la nueva base de datos JSON
-        os.makedirs(os.path.dirname(JSON_PATH), exist_ok=True)
-        with open(JSON_PATH, "w", encoding="utf-8") as f:
-            json.dump(datos_fichas, f, ensure_ascii=False, indent=2)
-
-        return {
-            "status": "ok",
-            "registros": total_registros,
-            "columnas": total_columnas,
-            "programas_nuevos": programas_nuevos_cnt,
-            "instructores_nuevos": instructores_nuevos_cnt
-        }
-
-    except Exception as e:
-        raise HTTPException(
-            status_code=400,
-            detail=f"Fallo en la validación o estructura del Excel: {str(e)}"
-        )
-@app.get("/api/abrir-programador/{ficha}")
-def abrir_programador(ficha: str):
-    # Buscar fichasSimple.json en la raíz del proyecto o en el directorio actual
-    json_path = os.path.join(BASE_DIR, "fichasSimple.json")
-    if not os.path.exists(json_path):
-        json_path = os.path.join(BASE_DIR, "src", "fichasSimple.json")
-        
-    if not os.path.exists(json_path):
-        # Intentar ejecutar constructor() para generarlo si no existe
-        try:
-            sys.path.append(os.path.join(BASE_DIR, "src"))
-            from constructor import constructor
-            constructor()
-            json_path = os.path.join(BASE_DIR, "fichasSimple.json")
-            if not os.path.exists(json_path):
-                json_path = os.path.join(os.getcwd(), "fichasSimple.json")
-        except Exception as e:
-            raise HTTPException(status_code=500, detail=f"No se encontró el índice de programadores y falló la generación: {str(e)}")
-            
-    if not os.path.exists(json_path):
-        raise HTTPException(status_code=404, detail="Índice de programadores (fichasSimple.json) no encontrado.")
-        
-    try:
-        with open(json_path, "r", encoding="utf-8") as f:
-            fichas_simple = json.load(f)
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Error al leer índice de programadores: {str(e)}")
-
-    ficha_data = fichas_simple.get(str(ficha))
-    if not ficha_data or not ficha_data.get("url"):
-        raise HTTPException(status_code=404, detail=f"No se encontró el programador de Drive para la ficha {ficha}")
-
-    url = ficha_data["url"]
-    
-    # Abrir en el navegador local de la máquina
-    try:
-        import webbrowser
-        webbrowser.open(url)
-    except Exception:
-        pass
-        
-    return {"status": "ok", "url": url, "nombre": ficha_data.get("nombre")}
 
 
 

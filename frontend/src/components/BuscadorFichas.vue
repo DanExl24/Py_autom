@@ -16,6 +16,7 @@ const query = ref('')
 const selectedMuni = ref('Todos')
 const selectedRed = ref('Todas')
 const selectedNivel = ref('Todos')
+const selectedTrimestre = ref('Todos')
 
 // Opciones únicas calculadas dinámicamente
 const municipios = computed(() => {
@@ -33,6 +34,28 @@ const niveles = computed(() => {
   return ['Todos', ...Array.from(list).sort()]
 })
 
+const parseTrimestre = (str: string) => {
+  const yearMatch = str.match(/\d{4}/)
+  const year = yearMatch ? parseInt(yearMatch[0]) : 0
+  let val = 0
+  if (str.toUpperCase().includes('IV')) val = 4
+  else if (str.toUpperCase().includes('III')) val = 3
+  else if (str.toUpperCase().includes('II')) val = 2
+  else if (str.toUpperCase().includes('I')) val = 1
+  return { year, val }
+}
+
+const trimestres = computed(() => {
+  const list = new Set(props.fichas.map(f => f["AÑO /TRIMESTRE DE INICIO"]).filter(Boolean))
+  const sorted = Array.from(list).sort((a, b) => {
+    const pa = parseTrimestre(a)
+    const pb = parseTrimestre(b)
+    if (pa.year !== pb.year) return pa.year - pb.year
+    return pa.val - pb.val
+  })
+  return ['Todos', ...sorted]
+})
+
 // Filtrado de fichas reactivo
 const filteredFichas = computed(() => {
   const q = query.value.toLowerCase().trim()
@@ -40,6 +63,7 @@ const filteredFichas = computed(() => {
     if (selectedMuni.value !== 'Todos' && f.MUNICIPIO !== selectedMuni.value) return false
     if (selectedRed.value !== 'Todas' && f["RED DE CONOCIMIENTO"] !== selectedRed.value) return false
     if (selectedNivel.value !== 'Todos' && f.NIVEL !== selectedNivel.value) return false
+    if (selectedTrimestre.value !== 'Todos' && f["AÑO /TRIMESTRE DE INICIO"] !== selectedTrimestre.value) return false
     
     if (q) {
       const instructor2025 = f["INSTRUCTOR TÉCNICO 2025"] || ''
@@ -48,6 +72,7 @@ const filteredFichas = computed(() => {
         ${f.FICHA} 
         ${f["NOMBRE DEL PROGRAMA"]} 
         ${f["CODIGO DE PROGRAMA"]} 
+        ${f["CÓDIGO PROYECTO"] || ''} 
         ${instructor2025} 
         ${instructor2026} 
         ${f.MUNICIPIO} 
@@ -86,6 +111,7 @@ const resetFilters = () => {
   selectedMuni.value = 'Todos'
   selectedRed.value = 'Todas'
   selectedNivel.value = 'Todos'
+  selectedTrimestre.value = 'Todos'
 }
 
 const abrirProgramador = async (fichaNum: string) => {
@@ -109,7 +135,7 @@ const abrirProgramador = async (fichaNum: string) => {
   <div class="space-y-6">
     <!-- Panel de Filtros -->
     <div class="bg-white dark:bg-slate-800 p-5 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 items-end">
+      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-7 gap-4 items-end">
         
         <!-- Búsqueda texto -->
         <div class="lg:col-span-2 space-y-1.5">
@@ -163,6 +189,19 @@ const abrirProgramador = async (fichaNum: string) => {
             class="w-full px-3 py-2 bg-slate-50 dark:bg-slate-700/50 border border-slate-200 dark:border-slate-600 rounded-lg text-sm text-slate-800 dark:text-slate-100 focus:outline-none focus:border-blue-500"
           >
             <option v-for="n in niveles" :key="n" :value="n">{{ n }}</option>
+          </select>
+        </div>
+
+        <!-- Filtro Trimestre -->
+        <div class="space-y-1.5">
+          <label class="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
+            Año/Trimestre:
+          </label>
+          <select 
+            v-model="selectedTrimestre"
+            class="w-full px-3 py-2 bg-slate-50 dark:bg-slate-700/50 border border-slate-200 dark:border-slate-600 rounded-lg text-sm text-slate-800 dark:text-slate-100 focus:outline-none focus:border-blue-500 truncate"
+          >
+            <option v-for="t in trimestres" :key="t" :value="t">{{ t }}</option>
           </select>
         </div>
 
@@ -239,8 +278,17 @@ const abrirProgramador = async (fichaNum: string) => {
               </td>
               <!-- Programa -->
               <td class="px-6 py-3.5 font-medium text-slate-800 dark:text-slate-100">
-                <div class="capitalize line-clamp-1 max-w-lg">
+                <div class="capitalize line-clamp-1 max-w-lg font-bold">
                   {{ f["NOMBRE DEL PROGRAMA"].toLowerCase() }}
+                </div>
+                <div class="flex items-center gap-2 mt-1 text-[10px] text-slate-400 font-semibold uppercase tracking-wider">
+                  <span class="px-1.5 py-0.5 bg-slate-100 dark:bg-slate-750 rounded dark:text-gray-700 dark:text-slate-300 font-black text-[9px]">
+                    {{ f.NIVEL }}
+                  </span>
+                  <span>•</span>
+                  <span>Código: {{ f["CODIGO DE PROGRAMA"] }}</span>
+                  <span>•</span>
+                  <span>V.{{ f.VERSION }}</span>
                 </div>
               </td>
               <!-- Municipio -->

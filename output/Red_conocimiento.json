@@ -7,16 +7,16 @@
   "min_col": "1",
   "max_col": "22"
  },
- "INFORMATICA, DISEÑO Y DESARROLLO DE SOFTWARE": {
-  "nombre": "INFORMATICA, DISEÑO Y DESARROLLO DE SOFTWARE",
+ "INFORMATICA, DISEÃ‘O Y DESARROLLO DE SOFTWARE": {
+  "nombre": "INFORMATICA, DISEÃ‘O Y DESARROLLO DE SOFTWARE",
   "coordenadas": "B5:B18",
   "min_row": "5",
   "max_row": "18",
   "min_col": "2",
   "max_col": "2"
  },
- "GESTIÓN ADMINISTRATIVA Y SERVICIOS FINANCIEROS": {
-  "nombre": "GESTIÓN ADMINISTRATIVA Y SERVICIOS FINANCIEROS",
+ "GESTIÃ“N ADMINISTRATIVA Y SERVICIOS FINANCIEROS": {
+  "nombre": "GESTIÃ“N ADMINISTRATIVA Y SERVICIOS FINANCIEROS",
   "coordenadas": "B22:B40",
   "min_row": "22",
   "max_row": "40",
@@ -39,6 +39,22 @@
   "min_col": "2",
   "max_col": "2"
  },
+ "ACTIVIDAD FISICA": {
+  "nombre": "ACTIVIDAD FISICA",
+  "coordenadas": "B63",
+  "min_row": "63",
+  "max_row": "63",
+  "min_col": "2",
+  "max_col": "2"
+ },
+ "CULTURA": {
+  "nombre": "CULTURA",
+  "coordenadas": "B67",
+  "min_row": "67",
+  "max_row": "67",
+  "min_col": "2",
+  "max_col": "2"
+ },
  "PECUARIA": {
   "nombre": "PECUARIA",
   "coordenadas": "B71:B76",
@@ -55,11 +71,27 @@
   "min_col": "2",
   "max_col": "2"
  },
- "CONSTRUCCIÓN": {
-  "nombre": "CONSTRUCCIÓN",
+ "ACUICOLA": {
+  "nombre": "ACUICOLA",
+  "coordenadas": "B85",
+  "min_row": "85",
+  "max_row": "85",
+  "min_col": "2",
+  "max_col": "2"
+ },
+ "CONSTRUCCIÃ“N": {
+  "nombre": "CONSTRUCCIÃ“N",
   "coordenadas": "B89:B90",
   "min_row": "89",
   "max_row": "90",
+  "min_col": "2",
+  "max_col": "2"
+ },
+ "AUTOMOTOR": {
+  "nombre": "AUTOMOTOR",
+  "coordenadas": "B94",
+  "min_row": "94",
+  "max_row": "94",
   "min_col": "2",
   "max_col": "2"
  },

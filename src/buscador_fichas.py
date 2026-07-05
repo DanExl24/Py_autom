@@ -1,5 +1,9 @@
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 import customtkinter as ctk
-from src.constructor import buscar_ficha
+from constructor import buscar_ficha
 
 ctk.set_appearance_mode("System")      # System, Light o Dark
 ctk.set_default_color_theme("blue")

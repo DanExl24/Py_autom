@@ -1,161 +1,218 @@
-Resumen general
-Total de formaciones
-Total de aprendices
-Promedio de aprendices por ficha
-Cantidad de redes de conocimiento
-Cantidad de municipios
-Cantidad de instructores
-Promedio de duración de programas
-Número de fichas activas por año
+📊 Dashboard
+
+Este debe responder la pregunta:
+
+"¿Cómo está el estado general del centro de formación?"
+
+No debería tener tablas gigantes ni filtros complejos.
+
+Tarjetas principales
+📚 Total de formaciones
+👨‍🎓 Total de aprendices
+🧑‍🏫 Total de instructores
+🌐 Redes
+🏙 Municipios
+📈 Promedio aprendices/ficha
+📅 Próximo inicio
+⏰ Próxima finalización
+Gráficas
+Aprendices por red
+Tipo de oferta
+Nivel (Técnico vs Tecnólogo)
+Top 10 programas
+Ranking municipios
+Línea de tiempo de aperturas
+
+Con unas 6-8 gráficas es suficiente.
+
+Alertas
+
+Una sección pequeña tipo:
+
+⚠ Programas con baja matrícula
+
+⚠ Formaciones próximas a terminar
+
+⚠ Programas sin proyecto
+
+⚠ Municipios sin oferta activa
+
+Esto hace que el dashboard sea realmente útil.
+
+📈 Estadísticas
+
+Aquí sí vive toda la carnita.
+
+Yo la dividiría por pestañas.
+
 Programas
-
-
-Top 10 programas con más aprendices
-Top 10 programas con más fichas
-Programas únicos existentes
-Programas sin proyecto asignado
-Programas con varias versiones
-Distribución por código de programa
-Cantidad de programas tecnológicos vs técnicos
-Programas virtuales vs presenciales (si el ambiente lo permite)
+Top programas
+Programas únicos
+Sin proyecto
+Varias versiones
+Tecnólogo vs Técnico
+Virtual vs Presencial
 Aprendices
-Total de aprendices por municipio
-Total de aprendices por red
-Total de aprendices por nivel
-Promedio de aprendices por instructor
-Promedio de aprendices por municipio
-Promedio de aprendices por tipo de oferta
-Ficha con mayor cantidad de aprendices
-Ficha con menor cantidad de aprendices
-Programas con baja matrícula (menos de X estudiantes)
+Aprendices por municipio
+Por red
+Por nivel
+Promedio por instructor
+Promedio por municipio
+Baja matrícula
 Instructores
 
-Esta parte suele gustarle mucho a coordinación.
+Aquí puedes lucirte.
 
-Ranking de instructores con más fichas
-Ranking de instructores con más aprendices
-Instructores que aparecen en 2025 y 2026
-Instructores nuevos en 2026
-Instructores que ya no aparecen
-Instructores por red
-Instructores por municipio
-Número de programas distintos asignados por instructor
-Instructor con mayor diversidad de programas
+Ranking por aprendices
+Ranking por fichas
+Nuevos
+Ya no aparecen
+Diversidad de programas
+Instructor con mayor diversidad
 Fechas
-
-Además de las que ya pensaste:
-
-Formaciones que inician este mes
-Formaciones que terminan este mes
-Formaciones próximas a terminar (<30 días)
-Formaciones cuya etapa lectiva termina pronto
-Cantidad de inicios por mes
-Cantidad de terminaciones por mes
-Línea de tiempo de aperturas
-Línea de tiempo de cierres
+Inician este mes
+Terminan este mes
+Próximos a terminar
+Aperturas por mes
+Cierres por mes
 Municipios
-Ranking de municipios por número de fichas
-Ranking de municipios por aprendices
-Municipios con mayor variedad de programas
-Municipios que solo tienen un programa
-Municipios por tipo de oferta
-Horarios
-
-En vez de solamente Diurna/Tarde/Noche:
-
-Horario más frecuente
-Distribución por jornada
-Horarios atípicos
-Fichas virtuales
-Fichas mixtas
-Cantidad de horas de ocupación por franja
+Ranking
+Programas distintos
 Oferta
-Porcentaje de oferta abierta vs cerrada
-Oferta abierta por municipio
-Oferta cerrada por municipio
-Oferta por red
-Oferta por nivel
+Municipios con un solo programa
+Oferta
+Abierta/Cerrada
+Por municipio
+Por red
+Por nivel
 Proyectos
-
-Como tienes código de proyecto:
-
-Proyectos con más fichas
-Proyectos con más aprendices
-Proyectos sin ficha
-Programas asociados a un proyecto
-Redes con mayor cantidad de proyectos
-Apoyo técnico
-
-Más allá de "tiene o no":
-
-Cantidad de apoyos requeridos
-Cantidad de observaciones distintas
-Programas que requieren más apoyo
-Redes con mayor necesidad de apoyo
-Municipios con mayor necesidad
+Más fichas
+Más aprendices
+Sin ficha
+Programas asociados
 Ambientes
-Ambientes más utilizados
-Ambientes compartidos por varias fichas
-Ambientes virtuales
-Ambientes por municipio
-Ambientes por red
-Indicadores interesantes
+Más usados
+Compartidos
+Virtuales
+Por municipio
+Indicadores
 
-Estos son los que hacen que el dashboard parezca "pro".
+Los "pro".
 
-Índice promedio de ocupación por ficha
-Densidad de aprendices por instructor
-Diversidad de programas por municipio
-Diversidad de programas por red
-Red con mayor crecimiento por trimestre
-Evolución de apertura de programas
-Evolución del número de aprendices
-Evolución de ofertas abiertas/cerradas
-Buscadores adicionales
+Densidad aprendiz/instructor
+Diversidad
+Evolución
+Crecimiento
+Ocupación
+🔍 Buscador
 
-Agregaría:
+Este sería probablemente el módulo más usado.
 
+No mostraría gráficas.
+
+Solo filtros + tabla.
+
+Filtros
+Programa
 Municipio
-Nombre del programa
+Instructor
 Año
 Trimestre
-Fecha de inicio
-Fecha de terminación
+Estado
+Red
 Ambiente
-Tipo de horario
-Cantidad mínima de aprendices
-Cantidad máxima de aprendices
-Duración
-Apoyo técnico requerido
-Rango de fechas
-Buscar texto libre (que revise todas las columnas)
-Si fuera un dashboard en Python (por ejemplo con pandas + plotly o streamlit), tendría unas tarjetas principales:
-📚 Total de Formaciones
+Horario
+Oferta
+Fecha inicio
+Fecha fin
+Cantidad mínima
+Cantidad máxima
+Texto libre
+Resultado
 
-👨‍🎓 Total Aprendices
+Tabla.
 
-🧑‍🏫 Total Instructores
+Ficha
 
-🌐 Redes de Conocimiento
+Programa
 
-🏙 Municipios
+Instructor
 
-📈 Promedio Aprendices/Ficha
+Municipio
 
-🏅 Programa con más estudiantes
+Aprendices
 
-👑 Instructor con más asignaciones
+Inicio
 
-📅 Próximo inicio
+Fin
 
-⏰ Próxima finalización
+Estado
 
-Y debajo pondría gráficas como:
+Y al hacer clic...
 
-📊 Barras: Aprendices por red.
-🥧 Pastel: Tipo de oferta.
-📈 Línea: Formaciones por trimestre.
-🗺️ Barras horizontales: Municipios con más formaciones.
-📦 Treemap: Programas dentro de cada red.
-🔥 Heatmap: Municipio × Red.
-📅 Calendario: Inicios y terminaciones por mes.
+Se abre un panel lateral.
+
+Con TODA la información de esa formación.
+
+Como una ficha técnica.
+
+🔄 Sincronizar Excel
+
+Este módulo debería ser muy simple.
+
+No necesita verse "bonito".
+
+Simplemente:
+
+Archivo actual
+Base actual
+
+formaciones_2026.xlsx
+
+Última sincronización
+
+03/07/2026
+Botón
+Seleccionar Excel
+Validaciones
+✔ 54 columnas detectadas
+
+✔ 3256 registros
+
+✔ Sin errores
+
+o
+
+❌ Falta columna Municipio
+
+❌ Formato inválido
+Progreso
+Leyendo...
+
+███████████ 85%
+Resultado
+✔ Sincronización finalizada
+
+3248 registros
+
+22 programas nuevos
+
+3 instructores nuevos
+Incluso agregaría una quinta sección
+📑 Reportes
+
+Porque tarde o temprano alguien de coordinación va a decir:
+
+"Está muy bonito el dashboard... ¿me lo puede pasar en Excel?"
+
+La burocracia tiene una habilidad casi sobrenatural para convertir un sistema moderno en un archivo adjunto de correo.
+
+Aquí pondría:
+
+Exportar PDF
+Exportar Excel
+Exportar CSV
+Imprimir
+Reportes mensuales
+Reportes por municipio
+Reportes por red

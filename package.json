@@ -1,0 +1,23 @@
+{
+  "name": "py_autom",
+  "version": "1.0.0",
+  "description": "Este proyecto consiste en un sistema de consulta, visualización y estadísticas de fichas formativas del SENA extraídas dinámicamente desde archivos Excel de Google Drive.",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanExl24/Py_autom.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/DanExl24/Py_autom/issues"
+  },
+  "homepage": "https://github.com/DanExl24/Py_autom#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.61.1",
+    "@types/node": "^26.1.1"
+  }
+}

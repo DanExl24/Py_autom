@@ -150,10 +150,12 @@ def extraer_fichas(excel_stream):
     # data_only=True permite leer los valores calculados de las fórmulas, no las fórmulas en sí
     wb = load_workbook(excel_stream, data_only=True)
     
-    # Intentar buscar la hoja (manejando posibles espacios al final del nombre)
-    sheet_name = "PASAN 2026 "
+    # Intentar buscar la hoja (manejando posibles nombres)
+    sheet_name = "PASAN 2026 - TI-TII-TIII"
     if sheet_name not in wb.sheetnames:
-        sheet_name = "PASAN 2026"
+        sheet_name = "PASAN 2026 "
+        if sheet_name not in wb.sheetnames:
+            sheet_name = "PASAN 2026"
     hoja = wb[sheet_name]
     print(f"Procesando hoja: '{sheet_name}'")
     

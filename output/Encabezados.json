@@ -1,128 +1,128 @@
 {
  "RED DE CONOCIMIENTO": {
   "nombre": "RED DE CONOCIMIENTO",
-  "coordenadas": "B4",
-  "row": 4,
-  "col": 2
+  "coordenadas": "A3",
+  "row": 3,
+  "col": 1
  },
  "NIVEL": {
   "nombre": "NIVEL",
-  "coordenadas": "C4",
-  "row": 4,
-  "col": 3
+  "coordenadas": "B3",
+  "row": 3,
+  "col": 2
  },
  "NOMBRE DEL PROGRAMA": {
   "nombre": "NOMBRE DEL PROGRAMA",
-  "coordenadas": "D4",
-  "row": 4,
-  "col": 4
+  "coordenadas": "C3",
+  "row": 3,
+  "col": 3
  },
  "CODIGO DE PROGRAMA": {
   "nombre": "CODIGO DE PROGRAMA",
-  "coordenadas": "E4",
-  "row": 4,
-  "col": 5
+  "coordenadas": "D3",
+  "row": 3,
+  "col": 4
  },
  "VERSION": {
   "nombre": "VERSION",
-  "coordenadas": "F4",
-  "row": 4,
-  "col": 6
+  "coordenadas": "E3",
+  "row": 3,
+  "col": 5
  },
  "FICHA ": {
   "nombre": "FICHA ",
-  "coordenadas": "G4",
-  "row": 4,
-  "col": 7
+  "coordenadas": "F3",
+  "row": 3,
+  "col": 6
  },
  "APRENDICES  MATRICULADOS": {
   "nombre": "APRENDICES  MATRICULADOS",
-  "coordenadas": "H4",
-  "row": 4,
-  "col": 8
+  "coordenadas": "G3",
+  "row": 3,
+  "col": 7
  },
  "TIPO DE OFERTA": {
   "nombre": "TIPO DE OFERTA",
-  "coordenadas": "I4",
-  "row": 4,
-  "col": 9
+  "coordenadas": "H3",
+  "row": 3,
+  "col": 8
  },
  "CÓDIGO PROYECTO": {
   "nombre": "CÓDIGO PROYECTO",
-  "coordenadas": "J4",
-  "row": 4,
-  "col": 10
+  "coordenadas": "I3",
+  "row": 3,
+  "col": 9
  },
  "MUNICIPIO": {
   "nombre": "MUNICIPIO",
-  "coordenadas": "K4",
-  "row": 4,
-  "col": 11
+  "coordenadas": "J3",
+  "row": 3,
+  "col": 10
  },
  "HORARIO": {
   "nombre": "HORARIO",
-  "coordenadas": "L4",
-  "row": 4,
-  "col": 12
+  "coordenadas": "K3",
+  "row": 3,
+  "col": 11
  },
  "AMBIENTE": {
   "nombre": "AMBIENTE",
-  "coordenadas": "M4",
-  "row": 4,
-  "col": 13
+  "coordenadas": "L3",
+  "row": 3,
+  "col": 12
  },
  "DURACION": {
   "nombre": "DURACION",
-  "coordenadas": "N4",
-  "row": 4,
-  "col": 14
+  "coordenadas": "M3",
+  "row": 3,
+  "col": 13
  },
  "AÑO /TRIMESTRE  DE INICI0": {
   "nombre": "AÑO /TRIMESTRE  DE INICI0",
-  "coordenadas": "O4",
-  "row": 4,
-  "col": 15
+  "coordenadas": "N3",
+  "row": 3,
+  "col": 14
  },
  "FECHA INICIO": {
   "nombre": "FECHA INICIO",
-  "coordenadas": "P4",
-  "row": 4,
-  "col": 16
+  "coordenadas": "O3",
+  "row": 3,
+  "col": 15
  },
  "FECHA FINAL ETAPA LECTIVA": {
   "nombre": "FECHA FINAL ETAPA LECTIVA",
-  "coordenadas": "Q4",
-  "row": 4,
-  "col": 17
+  "coordenadas": "P3",
+  "row": 3,
+  "col": 16
  },
  "FECHA TERMINACION": {
   "nombre": "FECHA TERMINACION",
-  "coordenadas": "R4",
-  "row": 4,
-  "col": 18
+  "coordenadas": "Q3",
+  "row": 3,
+  "col": 17
  },
  "INSTRUCTOR TECNICO 2025": {
   "nombre": "INSTRUCTOR TECNICO 2025",
-  "coordenadas": "S4",
-  "row": 4,
-  "col": 19
+  "coordenadas": "R3",
+  "row": 3,
+  "col": 18
  },
  "INSTRUCTOR TECNICO 2026": {
   "nombre": "INSTRUCTOR TECNICO 2026",
-  "coordenadas": "T4",
-  "row": 4,
-  "col": 20
+  "coordenadas": "S3",
+  "row": 3,
+  "col": 19
  },
  "APOYO TECNICO\nINGLES": {
   "nombre": "APOYO TECNICO\nINGLES",
-  "coordenadas": "U4",
-  "row": 4,
-  "col": 21
+  "coordenadas": "T3",
+  "row": 3,
+  "col": 20
  },
  "TRANSVERSALES": {
   "nombre": "TRANSVERSALES",
-  "coordenadas": "V4",
-  "row": 4,
-  "col": 22
+  "coordenadas": "U3",
+  "row": 3,
+  "col": 21
  }
 }

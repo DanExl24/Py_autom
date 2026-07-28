@@ -1,106 +1,106 @@
 {
  "FORMACIONES TITULADA REGULAR MODALIDAD PRESENCIAL Y VIRTUAL 2026": {
   "nombre": "FORMACIONES TITULADA REGULAR MODALIDAD PRESENCIAL Y VIRTUAL 2026",
-  "coordenadas": "A1:V3",
+  "coordenadas": "A1:U2",
   "min_row": "1",
-  "max_row": "3",
+  "max_row": "2",
   "min_col": "1",
-  "max_col": "22"
+  "max_col": "21"
  },
  "INFORMATICA, DISEÑO Y DESARROLLO DE SOFTWARE": {
   "nombre": "INFORMATICA, DISEÑO Y DESARROLLO DE SOFTWARE",
-  "coordenadas": "B5:B18",
-  "min_row": "5",
-  "max_row": "18",
-  "min_col": "2",
-  "max_col": "2"
+  "coordenadas": "A4:A15",
+  "min_row": "4",
+  "max_row": "15",
+  "min_col": "1",
+  "max_col": "1"
  },
  "GESTIÓN ADMINISTRATIVA Y SERVICIOS FINANCIEROS": {
   "nombre": "GESTIÓN ADMINISTRATIVA Y SERVICIOS FINANCIEROS",
-  "coordenadas": "B22:B40",
-  "min_row": "22",
-  "max_row": "40",
-  "min_col": "2",
-  "max_col": "2"
+  "coordenadas": "A19:A46",
+  "min_row": "19",
+  "max_row": "46",
+  "min_col": "1",
+  "max_col": "1"
  },
  "COMERCIO Y VENTAS": {
   "nombre": "COMERCIO Y VENTAS",
-  "coordenadas": "B44:B45",
-  "min_row": "44",
-  "max_row": "45",
-  "min_col": "2",
-  "max_col": "2"
+  "coordenadas": "A50",
+  "min_row": "50",
+  "max_row": "50",
+  "min_col": "1",
+  "max_col": "1"
  },
  "SALUD": {
   "nombre": "SALUD",
-  "coordenadas": "B49:B59",
-  "min_row": "49",
-  "max_row": "59",
-  "min_col": "2",
-  "max_col": "2"
+  "coordenadas": "A54:A63",
+  "min_row": "54",
+  "max_row": "63",
+  "min_col": "1",
+  "max_col": "1"
  },
  "ACTIVIDAD FISICA": {
   "nombre": "ACTIVIDAD FISICA",
-  "coordenadas": "B63",
-  "min_row": "63",
-  "max_row": "63",
-  "min_col": "2",
-  "max_col": "2"
+  "coordenadas": "A67",
+  "min_row": "67",
+  "max_row": "67",
+  "min_col": "1",
+  "max_col": "1"
  },
  "CULTURA": {
   "nombre": "CULTURA",
-  "coordenadas": "B67",
-  "min_row": "67",
-  "max_row": "67",
-  "min_col": "2",
-  "max_col": "2"
+  "coordenadas": "A71",
+  "min_row": "71",
+  "max_row": "71",
+  "min_col": "1",
+  "max_col": "1"
  },
  "PECUARIA": {
   "nombre": "PECUARIA",
-  "coordenadas": "B71:B76",
-  "min_row": "71",
-  "max_row": "76",
-  "min_col": "2",
-  "max_col": "2"
+  "coordenadas": "A75:A79",
+  "min_row": "75",
+  "max_row": "79",
+  "min_col": "1",
+  "max_col": "1"
  },
  "AGRICOLA": {
   "nombre": "AGRICOLA",
-  "coordenadas": "B80:B81",
-  "min_row": "80",
-  "max_row": "81",
-  "min_col": "2",
-  "max_col": "2"
+  "coordenadas": "A83:A84",
+  "min_row": "83",
+  "max_row": "84",
+  "min_col": "1",
+  "max_col": "1"
  },
- "ACUICOLA": {
-  "nombre": "ACUICOLA",
-  "coordenadas": "B85",
-  "min_row": "85",
-  "max_row": "85",
-  "min_col": "2",
-  "max_col": "2"
+ "CONSTRUCCION": {
+  "nombre": "CONSTRUCCION",
+  "coordenadas": "A88:A91",
+  "min_row": "88",
+  "max_row": "91",
+  "min_col": "1",
+  "max_col": "1"
  },
- "CONSTRUCCIÓN": {
-  "nombre": "CONSTRUCCIÓN",
-  "coordenadas": "B89:B90",
-  "min_row": "89",
-  "max_row": "90",
-  "min_col": "2",
-  "max_col": "2"
+ "HOTELERIA Y TURISMO": {
+  "nombre": "HOTELERIA Y TURISMO",
+  "coordenadas": "A95:A97",
+  "min_row": "95",
+  "max_row": "97",
+  "min_col": "1",
+  "max_col": "1"
  },
  "AUTOMOTOR": {
   "nombre": "AUTOMOTOR",
-  "coordenadas": "B94",
-  "min_row": "94",
-  "max_row": "94",
-  "min_col": "2",
-  "max_col": "2"
+  "coordenadas": "A101:A102",
+  "min_row": "101",
+  "max_row": "102",
+  "min_col": "1",
+  "max_col": "1"
  },
  "ELECTRICIDAD": {
   "nombre": "ELECTRICIDAD",
-  "coordenadas": "B98:B99",
-  "min_row": "98",
-  "max_row": "99",
-  "min_col": "2",
-  "max_col": "2"
+  "coordenadas": "A106:A107",
+  "min_row": "106",
+  "max_row": "107",
+  "min_col": "1",
+  "max_col": "1"
  }
 }

@@ -371,53 +371,27 @@ def ficha_por_red():
     return fichas
 
 if __name__ == "__main__":
-    # 1. Asegurar la existencia de Red_conocimiento.json y leer dimensiones
-    try:
-        if os.path.exists(path_redes):
-            with open(path_redes, "r", encoding="utf-8") as f:
-                json.load(f)
-    except Exception:
-        print("Borrando Red_conocimiento.json antiguo debido a problemas de lectura...")
-        try:
-            os.remove(path_redes)
-        except Exception:
-            pass
-
-    if not os.path.exists(path_redes):
-        print("Generando Red_conocimiento.json...")
-        obtener_rango_hoja("FORMACIONES TITULADA REGULAR MODALIDAD PRESENCIAL Y VIRTUAL 2026")
-        obtener_redes()
-        with open(path_redes, "w", encoding="utf-8") as f:
-            json.dump(PASAN2026, f, ensure_ascii=False, indent=1)
-            
-    with open(path_redes, "r", encoding="utf-8") as archivo:
-        ars = json.load(archivo)
-        ar = ars.get("FORMACIONES TITULADA REGULAR MODALIDAD PRESENCIAL Y VIRTUAL 2026")
-        if ar:
-            hoja_min_row = int(ar['min_row'])
-            hoja_max_row = int(ar['max_row'])
-            hoja_min_col = int(ar['min_col'])
-            hoja_max_col = int(ar['max_col'])
-            
-    # 2. Asegurar la existencia de Encabezados.json
-    try:
-        if os.path.exists(path_encabezados):
-            with open(path_encabezados, "r", encoding="utf-8") as f:
-                json.load(f)
-    except Exception:
-        print("Borrando Encabezados.json antiguo debido a problemas de lectura...")
-        try:
-            os.remove(path_encabezados)
-        except Exception:
-            pass
-
-    if not os.path.exists(path_encabezados):
-        print("Generando Encabezados.json...")
-        enc_datos = obtener_encabezados()
-        with open(path_encabezados, "w", encoding="utf-8") as f:
-            json.dump(enc_datos, f, ensure_ascii=False, indent=1)
-            
-    # 3. Procesar y guardar el archivo final fichas.json
+    # Siempre regenerar los JSONs auxiliares para evitar desalineación cuando cambie la hoja
+    print("Generando Red_conocimiento.json...")
+    obtener_rango_hoja("FORMACIONES TITULADA REGULAR MODALIDAD PRESENCIAL Y VIRTUAL 2026")
+    obtener_redes()
+    with open(path_redes, "w", encoding="utf-8") as f:
+        json.dump(PASAN2026, f, ensure_ascii=False, indent=1)
+        
+    # Cargar las dimensiones de la hoja a partir de la nueva generación
+    ar = PASAN2026.get("FORMACIONES TITULADA REGULAR MODALIDAD PRESENCIAL Y VIRTUAL 2026")
+    if ar:
+        hoja_min_row = int(ar['min_row'])
+        hoja_max_row = int(ar['max_row'])
+        hoja_min_col = int(ar['min_col'])
+        hoja_max_col = int(ar['max_col'])
+        
+    print("Generando Encabezados.json...")
+    enc_datos = obtener_encabezados()
+    with open(path_encabezados, "w", encoding="utf-8") as f:
+        json.dump(enc_datos, f, ensure_ascii=False, indent=1)
+        
+    # Procesar y guardar el archivo final fichas.json
     print("Extrayendo fichas y guardando en fichas.json...")
     fichas_finales = ficha_por_red()
     with open(path_fichas, "w", encoding="utf-8") as f:

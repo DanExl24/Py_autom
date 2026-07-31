@@ -17,89 +17,89 @@
  },
  "GESTIÓN ADMINISTRATIVA Y SERVICIOS FINANCIEROS": {
   "nombre": "GESTIÓN ADMINISTRATIVA Y SERVICIOS FINANCIEROS",
-  "coordenadas": "A19:A46",
+  "coordenadas": "A19:A45",
   "min_row": "19",
-  "max_row": "46",
+  "max_row": "45",
   "min_col": "1",
   "max_col": "1"
  },
  "COMERCIO Y VENTAS": {
   "nombre": "COMERCIO Y VENTAS",
-  "coordenadas": "A50",
-  "min_row": "50",
-  "max_row": "50",
+  "coordenadas": "A49",
+  "min_row": "49",
+  "max_row": "49",
   "min_col": "1",
   "max_col": "1"
  },
  "SALUD": {
   "nombre": "SALUD",
-  "coordenadas": "A54:A63",
-  "min_row": "54",
-  "max_row": "63",
+  "coordenadas": "A53:A62",
+  "min_row": "53",
+  "max_row": "62",
   "min_col": "1",
   "max_col": "1"
  },
  "ACTIVIDAD FISICA": {
   "nombre": "ACTIVIDAD FISICA",
-  "coordenadas": "A67",
-  "min_row": "67",
-  "max_row": "67",
+  "coordenadas": "A66",
+  "min_row": "66",
+  "max_row": "66",
   "min_col": "1",
   "max_col": "1"
  },
  "CULTURA": {
   "nombre": "CULTURA",
-  "coordenadas": "A71",
-  "min_row": "71",
-  "max_row": "71",
+  "coordenadas": "A70",
+  "min_row": "70",
+  "max_row": "70",
   "min_col": "1",
   "max_col": "1"
  },
  "PECUARIA": {
   "nombre": "PECUARIA",
-  "coordenadas": "A75:A79",
-  "min_row": "75",
-  "max_row": "79",
+  "coordenadas": "A74:A78",
+  "min_row": "74",
+  "max_row": "78",
   "min_col": "1",
   "max_col": "1"
  },
  "AGRICOLA": {
   "nombre": "AGRICOLA",
-  "coordenadas": "A83:A84",
-  "min_row": "83",
-  "max_row": "84",
+  "coordenadas": "A82:A83",
+  "min_row": "82",
+  "max_row": "83",
   "min_col": "1",
   "max_col": "1"
  },
  "CONSTRUCCION": {
   "nombre": "CONSTRUCCION",
-  "coordenadas": "A88:A91",
-  "min_row": "88",
-  "max_row": "91",
+  "coordenadas": "A87:A90",
+  "min_row": "87",
+  "max_row": "90",
   "min_col": "1",
   "max_col": "1"
  },
  "HOTELERIA Y TURISMO": {
   "nombre": "HOTELERIA Y TURISMO",
-  "coordenadas": "A95:A97",
-  "min_row": "95",
-  "max_row": "97",
+  "coordenadas": "A94:A96",
+  "min_row": "94",
+  "max_row": "96",
   "min_col": "1",
   "max_col": "1"
  },
  "AUTOMOTOR": {
   "nombre": "AUTOMOTOR",
-  "coordenadas": "A101:A102",
-  "min_row": "101",
-  "max_row": "102",
+  "coordenadas": "A100:A101",
+  "min_row": "100",
+  "max_row": "101",
   "min_col": "1",
   "max_col": "1"
  },
  "ELECTRICIDAD": {
   "nombre": "ELECTRICIDAD",
-  "coordenadas": "A106:A107",
-  "min_row": "106",
-  "max_row": "107",
+  "coordenadas": "A105:A106",
+  "min_row": "105",
+  "max_row": "106",
   "min_col": "1",
   "max_col": "1"
  }

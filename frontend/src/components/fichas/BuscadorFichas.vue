@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import { Icon } from '@iconify/vue'
-import type { Ficha } from '../types'
-import KpiCard from './KpiCard.vue'
+import type { Ficha } from '../../types'
+import KpiCard from '../dashboard/KpiCard.vue'
 import QuickDetailModal from './QuickDetailModal.vue'
-import { inferJornada, getHorariosGrouped, normalizeHorario } from '../utils/horario'
+import { inferJornada, getHorariosGrouped, normalizeHorario } from '../../utils/horario'
 
 const props = defineProps<{
   fichas: Ficha[]

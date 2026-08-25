@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { Icon } from '@iconify/vue'
-import type { Ficha } from '../types'
+import type { Ficha } from '../../types'
 
 const props = defineProps<{
   ficha: Ficha | null

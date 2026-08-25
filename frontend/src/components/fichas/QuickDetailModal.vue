@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import { Icon } from '@iconify/vue'
-import type { Ficha } from '../types'
-import { inferJornada } from '../utils/horario'
+import type { Ficha } from '../../types'
+import { inferJornada } from '../../utils/horario'
 
 const props = defineProps<{
   show: boolean

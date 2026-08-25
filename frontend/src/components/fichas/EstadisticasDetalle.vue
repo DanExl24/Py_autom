@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { ref, computed, watch } from 'vue'
 import { Icon } from '@iconify/vue'
-import type { Ficha } from '../types'
+import type { Ficha } from '../../types'
 import QuickDetailModal from './QuickDetailModal.vue'
-import { inferJornada, getHorariosGrouped, normalizeHorario } from '../utils/horario'
+import { inferJornada, getHorariosGrouped, normalizeHorario } from '../../utils/horario'
 
 const props = defineProps<{
   fichas: Ficha[]

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted, watch, onBeforeUnmount } from 'vue'
 import Chart from 'chart.js/auto'
-import type { Ficha } from '../types'
+import type { Ficha } from '../../types'
 
 const props = defineProps<{
   fichas: Ficha[]

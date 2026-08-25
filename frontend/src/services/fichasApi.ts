@@ -28,7 +28,15 @@ export const fichasApi = {
     return res.json()
   },
 
-  getActualizarStreamUrl() {
-    return `${API_BASE}/api/actualizar`
+  async fetchActualizarStream(driveToken?: string | null) {
+    const headers: Record<string, string> = {}
+    if (driveToken) {
+      headers['X-Google-Access-Token'] = driveToken
+    }
+
+    return fetch(`${API_BASE}/api/actualizar`, {
+      method: 'POST',
+      headers
+    })
   }
 }

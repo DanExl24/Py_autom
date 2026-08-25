@@ -24,7 +24,13 @@ SERVICE_ACCOUNT_PATHS = [
 ]
 
 def obtener_credenciales():
-    # 1. Prioridad: Verificar si existe Cuenta de Servicio (Service Account para Servidor/VPS)
+    # 0. Prioridad Web: Token de acceso directo emitido desde Google Identity Services en el navegador
+    direct_token = os.environ.get("GOOGLE_ACCESS_TOKEN")
+    if direct_token:
+        print("[AUTH] Usando token de acceso temporal provisto directamente desde la interfaz web...")
+        return Credentials(token=direct_token)
+
+    # 1. Verificar si existe Cuenta de Servicio (Service Account para Servidor/VPS)
     for sa_path in SERVICE_ACCOUNT_PATHS:
         if os.path.exists(sa_path):
             try:

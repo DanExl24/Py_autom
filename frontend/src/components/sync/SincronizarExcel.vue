@@ -2,25 +2,29 @@
 import { ref, nextTick } from 'vue'
 import { Icon } from '@iconify/vue'
 import { fichasApi } from '../../services/fichasApi'
+import { useAuth } from '../../composables/useAuth'
 
 const emit = defineEmits<{
   (e: 'sync-complete'): void
 }>()
 
+const { driveAccessToken, requestDriveAccessToken } = useAuth()
+
 const syncing = ref(false)
+const requestingAuth = ref(false)
+const tokenErrorDetected = ref(false)
 const syncLogs = ref<string[]>([])
 const terminalBody = ref<HTMLElement | null>(null)
 const successMsg = ref(false)
 
-const iniciarSincronizacion = async () => {
+const ejecutarSyncConToken = async (tokenParaUsar?: string | null) => {
   syncing.value = true
   successMsg.value = false
+  tokenErrorDetected.value = false
   syncLogs.value = ['[INFO] Conectando con el endpoint de actualización...']
-  
+
   try {
-    const response = await fetch(fichasApi.getActualizarStreamUrl(), {
-      method: 'POST'
-    })
+    const response = await fichasApi.fetchActualizarStream(tokenParaUsar)
 
     if (!response.ok) {
       throw new Error(`El servidor respondió con código ${response.status}`)
@@ -33,7 +37,6 @@ const iniciarSincronizacion = async () => {
       throw new Error('No se pudo abrir el canal de transmisión de datos (stream).')
     }
 
-    // Leer el flujo de datos (stream) del proceso python en tiempo real
     let partialLine = ''
     while (true) {
       const { value, done } = await reader.read()
@@ -43,26 +46,33 @@ const iniciarSincronizacion = async () => {
       const text = partialLine + chunk
       const lines = text.split('\n')
 
-      // Mantener la última línea si está incompleta
       partialLine = lines.pop() || ''
 
       for (const line of lines) {
         if (line.trim()) {
           syncLogs.value.push(line.trim())
           await scrollTerminal()
+
+          // Detectar si hubo error de credenciales o token inválido
+          if (
+            line.includes('invalid_grant') || 
+            line.includes('No se pudo autenticar') || 
+            line.includes('token expirado') ||
+            line.includes('RefreshError')
+          ) {
+            tokenErrorDetected.value = true
+          }
         }
       }
     }
 
-    // Agregar la última línea restante si la hay
     if (partialLine.trim()) {
       syncLogs.value.push(partialLine.trim())
       await scrollTerminal()
     }
 
-    // Comprobar si hubo errores en la ejecución
     const hasError = syncLogs.value.some(l => l.includes('[ERROR]'))
-    if (!hasError) {
+    if (!hasError && !tokenErrorDetected.value) {
       successMsg.value = true
       emit('sync-complete')
     }
@@ -72,6 +82,30 @@ const iniciarSincronizacion = async () => {
     await scrollTerminal()
   } finally {
     syncing.value = false
+  }
+}
+
+const iniciarSincronizacion = async () => {
+  await ejecutarSyncConToken(driveAccessToken.value)
+}
+
+// Renueva o solicita nuevo token a Google mediante ventana emergente
+const solicitarNuevoTokenYReintentar = async () => {
+  try {
+    requestingAuth.value = true
+    syncLogs.value.push('[INFO] Solicitando nuevo token de acceso a Google Cloud...')
+    await scrollTerminal()
+
+    const nuevoToken = await requestDriveAccessToken(true)
+    syncLogs.value.push('[INFO] ✅ Permiso de Google Drive otorgado con éxito. Reintentando sincronización...')
+    await scrollTerminal()
+
+    await ejecutarSyncConToken(nuevoToken)
+  } catch (err: any) {
+    syncLogs.value.push(`[ERROR] No se pudo obtener el token de Google: ${err.message}`)
+    await scrollTerminal()
+  } finally {
+    requestingAuth.value = false
   }
 }
 
@@ -93,15 +127,17 @@ const scrollTerminal = async () => {
         Sincronización en Vivo (Google Drive)
       </h2>
       <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
-        Presiona el botón de abajo para conectarte con la nube de Google Drive. El sistema descargará la última versión del consolidado de Excel (`CONSOLIDADO PROGRAMAS REGULAR - 2026.xlsx`) y extraerá la información en tiempo real sin requerir archivos manuales.
+        Descarga la última versión del archivo consolidado (`CONSOLIDADO PROGRAMAS REGULAR - 2026.xlsx`) directamente desde Google Drive. Si tu token expira, puedes renovarlo con un solo clic usando tu cuenta de Google.
       </p>
     </div>
 
-    <!-- Botón de Sincronización -->
-    <div class="flex justify-center">
+    <!-- Panel de Acciones / Botones -->
+    <div class="flex flex-wrap items-center justify-center gap-4">
+      
+      <!-- Botón Principal de Sincronización -->
       <button 
         @click="iniciarSincronizacion"
-        :disabled="syncing"
+        :disabled="syncing || requestingAuth"
         class="flex items-center gap-2 px-8 py-3.5 bg-primary hover:bg-primary-light disabled:bg-primary/50 text-white font-bold rounded-xl text-sm transition-all shadow-md active:scale-95 disabled:scale-100 disabled:pointer-events-none select-none"
       >
         <Icon 
@@ -110,6 +146,45 @@ const scrollTerminal = async () => {
           :class="{ 'animate-spin': syncing }" 
         />
         {{ syncing ? 'Sincronizando...' : 'Iniciar Sincronización desde Drive' }}
+      </button>
+
+      <!-- Botón para Renovar Token OAuth On-Demand -->
+      <button 
+        @click="solicitarNuevoTokenYReintentar"
+        :disabled="syncing || requestingAuth"
+        class="flex items-center gap-2 px-5 py-3.5 bg-secondary/10 hover:bg-secondary/20 text-secondary border border-secondary/30 font-bold rounded-xl text-sm transition-all shadow-sm active:scale-95 disabled:pointer-events-none select-none"
+        title="Solicita una nueva autorización de Google Drive en caso de expiración"
+      >
+        <Icon 
+          :icon="requestingAuth ? 'lucide:loader' : 'lucide:key-round'" 
+          class="w-4 h-4" 
+          :class="{ 'animate-spin': requestingAuth }"
+        />
+        {{ requestingAuth ? 'Autorizando con Google...' : 'Renovar Token de Drive' }}
+      </button>
+    </div>
+
+    <!-- Alerta de Token Inválido / Caducado con Botón Rápido -->
+    <div 
+      v-if="tokenErrorDetected"
+      class="bg-amber-500/10 border border-amber-500/30 p-4 rounded-xl flex items-center justify-between gap-4"
+    >
+      <div class="flex items-start gap-3">
+        <Icon icon="lucide:alert-triangle" class="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
+        <div class="space-y-0.5">
+          <h4 class="font-bold text-xs text-amber-300">Token de Google Drive Invalido o Expirado</h4>
+          <p class="text-[11px] text-slate-400">
+            Google requiere una nueva autorización para acceder a los archivos. Haz clic en el botón para renovarlo al instante.
+          </p>
+        </div>
+      </div>
+
+      <button 
+        @click="solicitarNuevoTokenYReintentar"
+        :disabled="requestingAuth"
+        class="px-4 py-2 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold rounded-lg text-xs shadow shrink-0 transition-colors"
+      >
+        Renovar y Reintentar Ahora
       </button>
     </div>
 
@@ -124,7 +199,7 @@ const scrollTerminal = async () => {
           <span class="w-3 h-3 rounded-full bg-emerald-500"></span>
         </div>
         <span class="text-[10px] font-mono text-slate-500 uppercase tracking-widest font-black">
-          python logs
+          live sync logs
         </span>
         <Icon icon="lucide:terminal" class="w-4 h-4 text-slate-500" />
       </div>

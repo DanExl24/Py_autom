@@ -1,4 +1,5 @@
-from fastapi import APIRouter, HTTPException
+from typing import Optional
+from fastapi import APIRouter, Header, HTTPException
 from fastapi.responses import StreamingResponse
 from app.services.sync_service import SyncService
 from app.core.gui_launcher import lanzar_buscador_gui
@@ -6,9 +7,11 @@ from app.core.gui_launcher import lanzar_buscador_gui
 router = APIRouter(prefix="/api", tags=["Sincronización"])
 
 @router.post("/actualizar")
-def actualizar_datos():
+def actualizar_datos(
+    x_google_access_token: Optional[str] = Header(None, alias="X-Google-Access-Token")
+):
     return StreamingResponse(
-        SyncService.ejecutar_sincronizacion_stream(), 
+        SyncService.ejecutar_sincronizacion_stream(access_token=x_google_access_token), 
         media_type="text/plain"
     )
 

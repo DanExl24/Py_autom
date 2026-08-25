@@ -1,19 +1,24 @@
 import os
 import subprocess
-from typing import Generator
+from typing import Generator, Optional
 from app.config import BASE_DIR, PYTHON_EXE
 
 class SyncService:
     @staticmethod
-    def ejecutar_sincronizacion_stream() -> Generator[str, None, None]:
+    def ejecutar_sincronizacion_stream(access_token: Optional[str] = None) -> Generator[str, None, None]:
         script_path = os.path.join(BASE_DIR, "src", "antiguo_lector.py")
         
+        env = os.environ.copy()
+        if access_token:
+            env["GOOGLE_ACCESS_TOKEN"] = access_token
+
         process = subprocess.Popen(
             [PYTHON_EXE, script_path],
             stdout=subprocess.PIPE,
             stderr=subprocess.STDOUT,
             text=True,
             cwd=str(BASE_DIR),
+            env=env,
             bufsize=1
         )
 

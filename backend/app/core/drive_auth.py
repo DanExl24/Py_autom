@@ -26,6 +26,12 @@ SERVICE_ACCOUNT_CANDIDATES = [
 ]
 
 def obtener_credenciales():
+    # 0. Prioridad Web: Token de acceso directo emitido desde el navegador
+    direct_token = os.environ.get("GOOGLE_ACCESS_TOKEN")
+    if direct_token:
+        print("[AUTH] Usando token de acceso temporal provisto directamente desde la interfaz web...")
+        return Credentials(token=direct_token)
+
     # 1. Prioridad: Verificar Service Account para VPS/Docker
     for sa_path in SERVICE_ACCOUNT_CANDIDATES:
         if sa_path.exists():

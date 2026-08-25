@@ -4,10 +4,12 @@ import { Icon } from '@iconify/vue'
 import type { Ficha } from './types'
 import { useTheme } from './composables/useTheme'
 import { useFichas } from './composables/useFichas'
+import { useAuth } from './composables/useAuth'
 import AppSidebar from './components/layout/AppSidebar.vue'
 import FichaTechnicalDrawer from './components/fichas/FichaTechnicalDrawer.vue'
 
 // Vistas
+import LoginView from './views/LoginView.vue'
 import DashboardView from './views/DashboardView.vue'
 import EstadisticasView from './views/EstadisticasView.vue'
 import BuscadorView from './views/BuscadorView.vue'
@@ -15,6 +17,7 @@ import SincronizarView from './views/SincronizarView.vue'
 import ReportesView from './views/ReportesView.vue'
 
 // Estados y composables
+const { isAuthenticated } = useAuth()
 const { isDark, toggleDarkMode } = useTheme()
 const {
   rawFichas,
@@ -33,12 +36,18 @@ const activeTab = ref('dashboard')
 const selectedFicha = ref<Ficha | null>(null)
 
 onMounted(() => {
-  loadData()
+  if (isAuthenticated.value) {
+    loadData()
+  }
 })
 </script>
 
 <template>
-  <div class="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 flex flex-col md:flex-row transition-colors duration-200">
+  <!-- Si el usuario NO está autenticado, mostrar pantalla de Login -->
+  <LoginView v-if="!isAuthenticated" />
+
+  <!-- Si el usuario ESTÁ autenticado, mostrar la aplicación -->
+  <div v-else class="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 flex flex-col md:flex-row transition-colors duration-200">
     
     <!-- Barra Lateral (Sidebar) -->
     <AppSidebar 

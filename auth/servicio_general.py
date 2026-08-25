@@ -1,7 +1,8 @@
 import os.path
-
+import json
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
+from google.oauth2 import service_account
 from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
 
@@ -10,36 +11,65 @@ SCOPES = [
     "https://www.googleapis.com/auth/spreadsheets.readonly"
 ]
 
-# Get the path relative to this script
+# Rutas de credenciales
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+ROOT_DIR = os.path.dirname(BASE_DIR)
+
 TOKEN_PATH = os.path.join(BASE_DIR, "json", "token.json")
 CREDENTIALS_PATH = os.path.join(BASE_DIR, "json", "credentials.json")
+SERVICE_ACCOUNT_PATHS = [
+    os.path.join(BASE_DIR, "json", "service_account.json"),
+    os.path.join(ROOT_DIR, "service_account.json"),
+    os.path.join(ROOT_DIR, "auth", "service_account.json")
+]
 
 def obtener_credenciales():
+    # 1. Prioridad: Verificar si existe Cuenta de Servicio (Service Account para Servidor/VPS)
+    for sa_path in SERVICE_ACCOUNT_PATHS:
+        if os.path.exists(sa_path):
+            try:
+                print(f"[AUTH] Usando Google Service Account desde: {sa_path}")
+                return service_account.Credentials.from_service_account_file(sa_path, scopes=SCOPES)
+            except Exception as e:
+                print(f"[AUTH] Error al cargar Service Account en {sa_path}: {e}")
+
+    # Verificar si credentials.json es de tipo Service Account
+    if os.path.exists(CREDENTIALS_PATH):
+        try:
+            with open(CREDENTIALS_PATH, "r", encoding="utf-8") as f:
+                data = json.load(f)
+                if data.get("type") == "service_account":
+                    print("[AUTH] Usando Service Account detectado en credentials.json")
+                    return service_account.Credentials.from_service_account_file(CREDENTIALS_PATH, scopes=SCOPES)
+        except Exception:
+            pass
+
+    # 2. Fallback: Token de usuario OAuth 2.0
     creds = None
-
     if os.path.exists(TOKEN_PATH):
-        creds = Credentials.from_authorized_user_file(
-            TOKEN_PATH,
-            SCOPES
-        )
+        try:
+            creds = Credentials.from_authorized_user_file(TOKEN_PATH, SCOPES)
+        except Exception as e:
+            print(f"[AUTH] Error al leer token OAuth: {e}")
 
-    if not creds or not creds.valid:
+    if creds and creds.valid:
+        return creds
 
-        if creds and creds.expired and creds.refresh_token:
+    if creds and creds.expired and creds.refresh_token:
+        try:
             creds.refresh(Request())
+            with open(TOKEN_PATH, "w", encoding="utf-8") as token_file:
+                token_file.write(creds.to_json())
+            return creds
+        except Exception as e:
+            print(f"[AUTH] Error al refrescar token OAuth ({e}).")
 
-        else:
-            flow = InstalledAppFlow.from_client_secrets_file(
-                CREDENTIALS_PATH,
-                SCOPES
-            )
-
-            creds = flow.run_local_server(port=0)
-
-        with open(TOKEN_PATH, "w") as token:
-            token.write(creds.to_json())
-    return creds
+    # Si estamos en entorno servidor y no hay navegador
+    raise RuntimeError(
+        "No se pudo autenticar con Google Drive. "
+        "En entornos de servidor (VPS/Docker), se recomienda colocar la llave 'service_account.json' en la carpeta 'auth/json/service_account.json' "
+        "y compartir la carpeta de Drive con el correo de la cuenta de servicio."
+    )
 
 def obtener_servicio_drive():
     return build(

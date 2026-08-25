@@ -3,6 +3,8 @@
 .env.local
 .env.*.local
 *.env
+*service_account*.json
+auth/json/service_account.json
 
 # Python
 __pycache__/

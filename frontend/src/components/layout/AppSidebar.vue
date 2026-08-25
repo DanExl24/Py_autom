@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { Icon } from '@iconify/vue'
 import { fichasApi } from '../../services/fichasApi'
+import { useAuth } from '../../composables/useAuth'
 
 defineProps<{
   activeTab: string
@@ -11,6 +12,8 @@ const emit = defineEmits<{
   (e: 'update:activeTab', tab: string): void
   (e: 'toggle-dark'): void
 }>()
+
+const { user, logout } = useAuth()
 
 const navItems = [
   { id: 'dashboard', label: 'Dashboard', icon: 'lucide:layout-dashboard' },
@@ -43,6 +46,31 @@ const abrirCtkBuscador = async () => {
       <span class="text-[10px] bg-primary-light text-slate-200 font-bold px-2 py-0.5 rounded-full">
         Admin
       </span>
+    </div>
+
+    <!-- Perfil del Usuario Autenticado -->
+    <div v-if="user" class="px-4 py-3 border-b border-primary-dark/30 flex items-center gap-3 bg-primary-dark/20">
+      <img 
+        v-if="user.picture" 
+        :src="user.picture" 
+        :alt="user.name"
+        referrerpolicy="no-referrer"
+        class="w-9 h-9 rounded-full border border-primary-light object-cover shrink-0" 
+      />
+      <div v-else class="w-9 h-9 rounded-full bg-primary-light flex items-center justify-center font-bold text-xs shrink-0">
+        {{ user.name.charAt(0).toUpperCase() }}
+      </div>
+      <div class="flex-1 min-w-0">
+        <span class="block text-xs font-bold text-slate-100 truncate">{{ user.name }}</span>
+        <span class="block text-[10px] text-slate-300 truncate">{{ user.email }}</span>
+      </div>
+      <button 
+        @click="logout"
+        title="Cerrar sesión"
+        class="p-1.5 text-slate-400 hover:text-rose-400 hover:bg-rose-950/40 rounded-lg transition-colors"
+      >
+        <Icon icon="lucide:log-out" class="w-4 h-4" />
+      </button>
     </div>
 
     <!-- Menú Navegación -->

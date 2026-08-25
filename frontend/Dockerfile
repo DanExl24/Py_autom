@@ -3,9 +3,12 @@ FROM node:20-alpine AS build-stage
 
 WORKDIR /app
 
-# Argumento para la URL del backend en tiempo de compilación
+# Argumentos de entorno para compilación
 ARG VITE_API_URL
 ENV VITE_API_URL=$VITE_API_URL
+
+ARG VITE_GOOGLE_CLIENT_ID
+ENV VITE_GOOGLE_CLIENT_ID=$VITE_GOOGLE_CLIENT_ID
 
 # Copiar manifiestos de dependencias
 COPY package*.json ./

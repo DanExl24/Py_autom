@@ -32,3 +32,10 @@ export interface Kpis {
   totalMunicipios: number;
   totalInstructores: number;
 }
+
+export interface AuthUser {
+  email: string;
+  name: string;
+  picture?: string;
+  sub?: string;
+}

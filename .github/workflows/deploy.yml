@@ -1,0 +1,57 @@
+name: Deploy to VPS
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: Deploy to VPS via SSH
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Executing remote SSH commands on VPS
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USERNAME }}
+          password: ${{ secrets.VPS_PASSWORD }}
+          port: 22
+          script: |
+            echo "🚀 Iniciando despliegue de Py_autom en el VPS..."
+
+            # 1. Asegurar la red externa proxy-network para el reverse proxy
+            docker network create proxy-network || true
+
+            # 2. Directorio del proyecto en el VPS
+            PROJECT_DIR="/var/www/py_autom"
+
+            if [ ! -d "$PROJECT_DIR" ]; then
+              echo "Clonando repositorio por primera vez..."
+              mkdir -p /var/www
+              git clone https://github.com/DanExl24/Py_autom.git "$PROJECT_DIR"
+            fi
+
+            cd "$PROJECT_DIR"
+
+            # 3. Traer los últimos cambios de main
+            git fetch --all
+            git reset --hard origin/main
+
+            # 4. Asegurar que existe el archivo .env (si no existe, crear a partir de .env.example)
+            if [ ! -f ".env" ]; then
+              echo "Creando .env a partir de .env.example..."
+              cp .env.example .env
+            fi
+
+            # 5. Construir y levantar contenedores con Docker Compose
+            docker compose down --remove-orphans || true
+            docker compose up -d --build
+
+            # 6. Limpieza de imágenes no utilizadas
+            docker image prune -f
+
+            echo "✅ Despliegue completado con éxito."

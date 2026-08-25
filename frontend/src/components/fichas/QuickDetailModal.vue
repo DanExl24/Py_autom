@@ -42,16 +42,13 @@ const filteredFichas = computed(() => {
   return list
 })
 
+import { fichasApi } from '../../services/fichasApi'
+
 const totalAprendices = computed(() => props.fichas.reduce((sum, f) => sum + (f["APRENDICES MATRICULADOS"] || 0), 0))
 
 const abrirProgramador = async (fichaNum: string) => {
   try {
-    const res = await fetch(`/api/abrir-programador/${fichaNum}`)
-    if (!res.ok) {
-      const errData = await res.json()
-      throw new Error(errData.detail || 'Ficha no encontrada en Drive')
-    }
-    const data = await res.json()
+    const data = await fichasApi.abrirProgramador(fichaNum)
     if (data.url) window.open(data.url, '_blank')
   } catch (e: any) {
     alert(e.message || 'Error al abrir el programador')

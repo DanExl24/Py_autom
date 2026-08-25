@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, nextTick } from 'vue'
 import { Icon } from '@iconify/vue'
+import { fichasApi } from '../../services/fichasApi'
 
 const emit = defineEmits<{
   (e: 'sync-complete'): void
@@ -17,7 +18,7 @@ const iniciarSincronizacion = async () => {
   syncLogs.value = ['[INFO] Conectando con el endpoint de actualización...']
   
   try {
-    const response = await fetch('/api/actualizar', {
+    const response = await fetch(fichasApi.getActualizarStreamUrl(), {
       method: 'POST'
     })
 

@@ -11,6 +11,8 @@ const emit = defineEmits<{
   (e: 'close'): void
 }>()
 
+import { fichasApi } from '../../services/fichasApi'
+
 const openingProgramador = ref(false)
 const errorProgramador = ref<string | null>(null)
 
@@ -19,12 +21,7 @@ const abrirProgramador = async () => {
   try {
     openingProgramador.value = true
     errorProgramador.value = null
-    const res = await fetch(`/api/abrir-programador/${props.ficha.FICHA}`)
-    if (!res.ok) {
-      const errData = await res.json()
-      throw new Error(errData.detail || 'Ficha no encontrada en Drive')
-    }
-    const data = await res.json()
+    const data = await fichasApi.abrirProgramador(props.ficha.FICHA)
     if (data.url) {
       window.open(data.url, '_blank')
     }

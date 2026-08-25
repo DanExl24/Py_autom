@@ -64,11 +64,11 @@ def obtener_credenciales():
         except Exception as e:
             print(f"[AUTH] Error al refrescar token OAuth ({e}).")
 
-    # Si estamos en entorno servidor y no hay navegador
+    # Si el token no es válido ni se pudo refrescar
     raise RuntimeError(
-        "No se pudo autenticar con Google Drive. "
-        "En entornos de servidor (VPS/Docker), se recomienda colocar la llave 'service_account.json' en la carpeta 'auth/json/service_account.json' "
-        "y compartir la carpeta de Drive con el correo de la cuenta de servicio."
+        "No se pudo autenticar con Google Drive (token expirado o inválido). "
+        "Para renovar el token: ejecuta 'python auth/generar_token.py' en tu PC local e ingresa con tu cuenta de Google. "
+        "Luego copia el contenido generado en 'auth/json/token.json' dentro del VPS."
     )
 
 def obtener_servicio_drive():

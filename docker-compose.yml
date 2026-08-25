@@ -5,8 +5,6 @@ services:
       dockerfile: backend/Dockerfile
     container_name: pyautom-backend
     restart: unless-stopped
-    ports:
-      - "3000:3000"
     env_file:
       - .env
     volumes:
@@ -24,8 +22,6 @@ services:
         VITE_API_URL: https://api-pyautom.adsoproject.dev
     container_name: pyautom-frontend
     restart: unless-stopped
-    ports:
-      - "80:80"
     networks:
       - proxy-network
 

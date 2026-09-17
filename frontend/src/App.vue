@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, watch } from 'vue'
 import { Icon } from '@iconify/vue'
 import type { Ficha } from './types'
 import { useTheme } from './composables/useTheme'
@@ -35,11 +35,16 @@ const {
 const activeTab = ref('dashboard')
 const selectedFicha = ref<Ficha | null>(null)
 
-onMounted(() => {
-  if (isAuthenticated.value) {
-    loadData()
-  }
-})
+// Cargar datos tanto al montar como apenas cambie el estado de autenticación tras iniciar sesión
+watch(
+  isAuthenticated,
+  (authed) => {
+    if (authed) {
+      loadData()
+    }
+  },
+  { immediate: true }
+)
 </script>
 
 <template>

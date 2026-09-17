@@ -58,7 +58,14 @@ def obtener_credenciales():
         try:
             creds = Credentials.from_authorized_user_file(str(TOKEN_JSON_PATH), SCOPES)
         except Exception as e:
-            print(f"[AUTH] Error al leer token OAuth: {e}")
+            print(f"[AUTH] Advertencia al leer token OAuth con refresh_token: {e}")
+            try:
+                with open(TOKEN_PATH, "r", encoding="utf-8") as f:
+                    token_data = json.load(f)
+                    if token_data.get("token"):
+                        creds = Credentials(token=token_data["token"], scopes=SCOPES)
+            except Exception as e_inner:
+                print(f"[AUTH] Error al cargar token directo: {e_inner}")
 
     if creds and creds.valid:
         return creds

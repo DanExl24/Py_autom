@@ -25,7 +25,7 @@ def generar_token():
 
     print("Abriendo el navegador para iniciar sesión con tu cuenta de Google...")
     flow = InstalledAppFlow.from_client_secrets_file(CREDENTIALS_PATH, SCOPES)
-    creds = flow.run_local_server(port=0)
+    creds = flow.run_local_server(port=8080)
 
     os.makedirs(AUTH_JSON_DIR, exist_ok=True)
     token_json_str = creds.to_json()

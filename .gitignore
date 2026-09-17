@@ -4,7 +4,11 @@
 .env.*.local
 *.env
 *service_account*.json
+auth/json/credentials.json
+auth/json/token.json
 auth/json/service_account.json
+auth.json
+*.session.json
 
 # Python
 __pycache__/

@@ -3,9 +3,18 @@ import { configSofia } from "./config";
 import { ctx } from "./Class/sofiaContext";
 import { descargar_juicios_fichas } from "./reporte_juicios/descargar_JE";
 const rellenarForm = async (frame: FrameLocator) => {
+  const username = process.env.SOFIA_USERNAME || "";
+  const password = process.env.SOFIA_PASSWORD || "";
+
+  if (!username || !password) {
+    throw new Error(
+      "Credenciales no configuradas. Define SOFIA_USERNAME y SOFIA_PASSWORD en las variables de entorno o archivo .env."
+    );
+  }
+
   await frame.locator("#tipoId").selectOption("CC");
-  await frame.locator("#username").fill("1014302196");
-  await frame.locator("[name='josso_password']").fill("Jd1014302196*2026");
+  await frame.locator("#username").fill(username);
+  await frame.locator("[name='josso_password']").fill(password);
   await frame.getByRole("button", { name: "Ingresar" }).click();
 };
 
